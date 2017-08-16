@@ -2,7 +2,7 @@
 
 [По-русски](README.md) | **In english**
 
-[IntraHouse](http://www.intrahouse.eu) — Software for Automation Systems.
+[IntraHouse](http://www.intrahouse.eu/en/) — Software for Automation Systems.
 
 
 ## Content
@@ -28,7 +28,7 @@
 Stay in touch with us via form [issues](https://github.com/intrahouseio/Doc/issues) or email support@intrahouse.eu.
 
 If you found a bug in IntraHouse system or
-[plugins](http://www.intrahouse.eu/ru/pluginsru/), please look at
+[plugins](http://www.intrahouse.eu/en/plugins/), please look at
 [issues](https://github.com/intrahouseio/Doc/issues). We probably know and are fixing it already. If we don't, it's better to report the bug there. There you can also leave your wishes and suggestions.
 
 You can follow the news by

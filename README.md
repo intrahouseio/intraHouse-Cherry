@@ -2,7 +2,7 @@
 
 **По-русски** | [In english](docs_eng/README.md)
 
-[IntraHouse](http://www.intrahouse.eu) — программное обеспечение для систем автоматизации.
+[IntraHouse](http://www.intrahouse.eu/ru/) — программное обеспечение для систем автоматизации.
 
 
 ## Содержание
