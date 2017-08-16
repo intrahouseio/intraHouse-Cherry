@@ -32,5 +32,5 @@
 пожелания и предложения.
 
 За новостями вы можете следить по
-[релизам](https://github.com/intrahouseio/Doc/releases) в этом репозитории.
-[milestones](https://github.com/intrahouseio/Doc/milestones).
+[релизам](https://github.com/intrahouseio/Doc/releases) или
+[milestones](https://github.com/intrahouseio/Doc/milestones) в этом репозитории.
