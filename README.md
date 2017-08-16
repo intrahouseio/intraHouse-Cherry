@@ -22,7 +22,7 @@
 
 ## Поддержка, обратная связь, новости
 
-Общайтесь с нами через [issues](https://github.com/intrahouseio/Doc/issues) или
+Общайтесь с нами через форму [issues](https://github.com/intrahouseio/Doc/issues) или
 через почту support@intrahouse.eu.
 
 Если вы нашли баг в работе системе IntraHouse или
