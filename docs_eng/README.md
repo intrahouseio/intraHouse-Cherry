@@ -1,6 +1,6 @@
 # IntraHouse
 
-[По-русски](README.md) | **In english**
+[По-русски](/README.md) | **In english**
 
 [IntraHouse](http://www.intrahouse.eu/en/) — Software for Automation Systems.
 
