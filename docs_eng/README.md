@@ -27,7 +27,7 @@
 
 Stay in touch with us via form [issues](https://github.com/intrahouseio/Doc/issues) or email support@intrahouse.eu.
 
-If you found a bug in IntraHouse system or
+If you found a bug in [IntraHouse](http://www.intrahouse.eu/en/) system or
 [plugins](http://www.intrahouse.eu/en/plugins/), please look at
 [issues](https://github.com/intrahouseio/Doc/issues). We probably know and are fixing it already. If we don't, it's better to report the bug there. There you can also leave your wishes and suggestions.
 
