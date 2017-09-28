@@ -11,7 +11,7 @@
 ### General information
 
 * [Basic information](/general.md)
-* [Get](/get.md)
+* [Get](get.md)
 
 
 ### API
