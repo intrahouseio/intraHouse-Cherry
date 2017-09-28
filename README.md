@@ -1,6 +1,6 @@
 # IntraHouse
 
-**По-русски** | [In english](docs_eng/README.md)
+**По-русски** | [In english](docs/eu/README.md)
 
 [IntraHouse](http://www.intrahouse.eu/ru/) — программное обеспечение для систем автоматизации.
 
@@ -10,17 +10,18 @@
 
 ### Главная информация
 
-* [Общая информация](docs/general.md)
+* [Общая информация](docs/ru/general.md)
+* [Скачать](docs/ru/get.md)
 
 
 ### API
 
-* [Общая информация](docs/api.md)
+* [Общая информация](docs/ru/api.md)
 
 
 ### Plugins
 
-* [Общая информация](docs/plugins.md)
+* [Общая информация](docs/ru/plugins.md)
 
 
 ## Поддержка, обратная связь, новости
