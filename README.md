@@ -28,7 +28,7 @@
 Общайтесь с нами через форму [issues](https://github.com/intrahouseio/Doc/issues) или
 через почту support@intrahouse.eu.
 
-Если вы нашли баг в работе системе IntraHouse или
+Если вы нашли баг в работе системе [IntraHouse](http://www.intrahouse.eu/ru/) или
 [плагинах](http://www.intrahouse.eu/ru/pluginsru/), загляните в
 [issues](https://github.com/intrahouseio/Doc/issues), возможно, про него мы уже знаем и
 работаем над этим. Если нет, лучше всего сообщить о нём там. Там же вы можете оставлять свои
