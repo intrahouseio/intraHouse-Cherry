@@ -1,6 +1,8 @@
 #!/bin/bash
-
-repo_name="Doc"
+if [ "$EUID" -ne 0 ]
+  then echo -e "\033[0;31m Please run as root."
+  exit
+fi
 
 echo -e "\033[0;34m"
 cat << "EOF"
@@ -17,20 +19,21 @@ cat << "EOF"
 -----------------------------------------------------------------------------------
 
 EOF
-echo -e "\033[0;36m"
 
-echo -e "...installing \033[0m"
-echo ""
+repo_name="Doc"
+root=/opt/intrahouse
 
-echo "check latest"
+mkdir -p $root
 
-file=$(curl -s https://api.github.com/repos/intrahouseio/$repo_name/releases/latest | grep browser_download_url | cut -d '"' -f 4)
+case "$OSTYPE" in
+  solaris*) echo -e "\033[0;33m Error:\033[0;31m Installation is not supported\033[0;35m $OSTYPE!" && exit ;; #SOLARIS
+  darwin*)  url="http://192.168.0.111:3000/api/install_darwin.sh" ;; #OSX
+  linux*)   url="http://192.168.0.111:3000/api/install_linux.sh" ;; #LINUX
+  bsd*)     echo -e "\033[0;33m Error:\033[0;31m Installation is not supported\033[0;35m $OSTYPE!" && exit ;; #BSD
+  msys*)    echo -e "\033[0;33m Error:\033[0;31m Installation is not supported\033[0;35m $OSTYPE!" && exit ;; #WINDOWS
+  *)        echo -e "\033[0;33m Error:\033[0;31m Unknown operating system\033[0;35m $OSTYPE\033[0;31m, installation aborted!" && exit ;; #UNKNOWN
+esac
 
-echo -e "latest found: \033[0;32m $file \033[0m"
-echo "get latest"
-
-curl -sL -o intrahouse-lite.zip $file
-
-echo -e "\033[0;36m"
-echo "Install complete!!!"
-echo -e "\033[0m"
+echo $MACHINE_TYPE
+curl -sL -o $root/install.sh $url
+. $root/install.sh
