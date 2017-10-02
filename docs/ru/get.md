@@ -21,7 +21,7 @@
 * **Debian 8** (jessie)
 
 
-## Red Hat/RHEL, CentOS and Fedora.
+## Red Hat, CentOS and Fedora.
 
 `curl -sl https://raw.githubusercontent.com/intrahouseio/Doc/master/install.sh | sudo -E bash`
 
