@@ -89,7 +89,7 @@ rm -fr ./intrahouse-lite.zip
 rm -fr ./node.tar.xz
 
 cd ./backend
-export PATH=$PATH:$root/node/bin
+export PATH=$root/node/bin:$PATH
 $root/node/bin/npm i
 
 #-------------- end
