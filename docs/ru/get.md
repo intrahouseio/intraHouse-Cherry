@@ -32,7 +32,7 @@
 * **Debian 8** (jessie)
 
 
-## Red Hat, CentOS and Fedora.
+## Red Hat and CentOS.
 
 `curl -sl https://raw.githubusercontent.com/intrahouseio/Doc/master/install.sh | sudo -E bash`
 
@@ -43,19 +43,10 @@
 
 ###### Supported Red Hat versions:
 
-* **RHEL 5** (32-bit and 64-bit)
 * **RHEL 6** (32-bit and 64-bit)
 * **RHEL 7** (64-bit)
 
 ###### Supported CentOS versions:
 
-* **CentOS 5** (32-bit and 64-bit)
 * **CentOS 6** (32-bit and 64-bit)
 * **CentOS 7** (64-bit)
-
-###### Supported Fedora versions:
-
-* **Fedora 19** (32-bit and 64-bit)
-* **Fedora 20** (32-bit and 64-bit)
-* **Fedora 21** (32-bit and 64-bit)
-

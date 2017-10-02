@@ -30,7 +30,7 @@ else
   echo -e "\033[0;35m unzip:\033[0;31m false \033[0m --> will be installed"
 
   apt-get update > /dev/null
-  apt-get install unzip > /dev/null
+  apt-get install -y unzip > /dev/null
 fi
 
 if [[ $check_xz != "false" ]]; then
@@ -39,7 +39,7 @@ else
   echo -e "\033[0;35m xz-utils:\033[0;31m false \033[0m --> will be installed"
 
   apt-get update > /dev/null
-  apt-get install xz-utils > /dev/null
+  apt-get install -y xz-utils > /dev/null
 fi
 
 #-------------- end
