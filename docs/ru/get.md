@@ -1,5 +1,5 @@
 
-## Debian and Ubuntu based Linux distributions
+## Debian and Ubuntu
 
 `curl -sl https://raw.githubusercontent.com/intrahouseio/Doc/master/install.sh | sudo -E bash`
 
@@ -19,3 +19,31 @@
 
 * **Debian 7** (wheezy)
 * **Debian 8** (jessie)
+
+
+## Red Hat/RHEL, CentOS and Fedora.
+
+`curl -sl https://raw.githubusercontent.com/intrahouseio/Doc/master/install.sh | sudo -E bash`
+
+###### Available architectures:
+
+* **i386** (32-bit)
+* **x86_64** (64-bit)
+
+###### Supported Ubuntu versions:
+
+* **RHEL 5** (32-bit and 64-bit)
+* **RHEL 6** (32-bit and 64-bit)
+* **RHEL 7** (64-bit)
+
+###### Supported Debian versions:
+
+* **CentOS 5** (32-bit and 64-bit)
+* **CentOS 6** (32-bit and 64-bit)
+* **CentOS 7** (64-bit)
+
+###### Supported Debian versions:
+
+* **Fedora 21** (32-bit and 64-bit)
+* **Fedora 20** (32-bit and 64-bit)
+* **Fedora 19** (32-bit and 64-bit)
