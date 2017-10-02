@@ -1,5 +1,16 @@
 
-## Debian and Ubuntu based Linux distributions
+## macOS
+
+`curl -sl https://raw.githubusercontent.com/intrahouseio/Doc/master/install.sh | sudo -E bash`
+
+###### Supported versions:
+* **Old versions** (not tested)
+* **Yosemite** (10.10)
+* **El Capitan** (10.11)
+* **Sierra** (10.12)
+
+
+## Debian and Ubuntu
 
 `curl -sl https://raw.githubusercontent.com/intrahouseio/Doc/master/install.sh | sudo -E bash`
 
@@ -19,3 +30,23 @@
 
 * **Debian 7** (wheezy)
 * **Debian 8** (jessie)
+
+
+## Red Hat and CentOS.
+
+`curl -sl https://raw.githubusercontent.com/intrahouseio/Doc/master/install.sh | sudo -E bash`
+
+###### Available architectures:
+
+* **i386** (32-bit)
+* **x86_64** (64-bit)
+
+###### Supported Red Hat versions:
+
+* **RHEL 6** (32-bit and 64-bit)
+* **RHEL 7** (64-bit)
+
+###### Supported CentOS versions:
+
+* **CentOS 6** (32-bit and 64-bit)
+* **CentOS 7** (64-bit)
