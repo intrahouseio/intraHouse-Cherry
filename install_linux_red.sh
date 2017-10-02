@@ -90,6 +90,7 @@ rm -fr ./node.tar.xz
 
 cd ./backend
 export PATH=$root/node/bin:$PATH
+$root/node/bin/npm -v
 $root/node/bin/npm i
 
 #-------------- end
