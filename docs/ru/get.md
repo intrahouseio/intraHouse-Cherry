@@ -44,6 +44,7 @@
 
 ###### Supported Fedora versions:
 
-* **Fedora 21** (32-bit and 64-bit)
-* **Fedora 20** (32-bit and 64-bit)
 * **Fedora 19** (32-bit and 64-bit)
+* **Fedora 20** (32-bit and 64-bit)
+* **Fedora 21** (32-bit and 64-bit)
+
