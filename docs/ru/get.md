@@ -1,4 +1,9 @@
 
+## macOS
+
+`curl -sl https://raw.githubusercontent.com/intrahouseio/Doc/master/install.sh | sudo -E bash`
+
+
 ## Debian and Ubuntu
 
 `curl -sl https://raw.githubusercontent.com/intrahouseio/Doc/master/install.sh | sudo -E bash`
