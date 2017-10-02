@@ -3,6 +3,12 @@
 
 `curl -sl https://raw.githubusercontent.com/intrahouseio/Doc/master/install.sh | sudo -E bash`
 
+###### Supported versions:
+
+* **Yosemite** (10.10)
+* **El Capitan** (10.11)
+* **Sierra** (10.12)
+
 
 ## Debian and Ubuntu
 
