@@ -4,7 +4,7 @@
 `curl -sl https://raw.githubusercontent.com/intrahouseio/Doc/master/install.sh | sudo -E bash`
 
 ###### Supported versions:
-
+* **Old versions** (not tested)
 * **Yosemite** (10.10)
 * **El Capitan** (10.11)
 * **Sierra** (10.12)
