@@ -22,10 +22,13 @@ EOF
 
 repo_name="Doc"
 name_service="intrahouse-c"
-root=/opt/$name_service
-project_path=~/$name_service
+
 port=8088
+root=/opt/$name_service
+project_path=/var/lib/$name_service
+
 mkdir -p $root
+mkdir -p $project_path
 
 function getLinuxUrl {
   check=$(apt-get 2> /dev/null || echo "false" )
@@ -48,6 +51,13 @@ esac
 
  curl -sL -o $root/install.sh $url
  . $root/install.sh
+
+ cat > $root/config.json <<EOF
+ {
+   "port":$port,
+   "project":"$project_path",
+ }
+EOF
 
 myip=""
 while IFS=$': \t' read -a line ;do
