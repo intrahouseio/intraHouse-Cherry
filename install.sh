@@ -46,8 +46,8 @@ case "$OSTYPE" in
 esac
 
 
-# curl -sL -o $root/install.sh $url
-# . $root/install.sh
+ curl -sL -o $root/install.sh $url
+ . $root/install.sh
 
 myip=""
 while IFS=$': \t' read -a line ;do
