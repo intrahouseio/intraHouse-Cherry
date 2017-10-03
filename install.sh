@@ -5,7 +5,7 @@ if [ "$EUID" -ne 0 ]
 fi
 
 echo -e "\033[0;34m"
-cat << "EOF"
+cat <<\EOF
    ______          __                   __  __
   /\__  _\        /\ \__               /\ \/\ \
   \/_/\ \/    ___\ \ ,_\  _ __    __  \ \ \_\ \    ___   __  __    ____     __
@@ -21,8 +21,10 @@ cat << "EOF"
 EOF
 
 repo_name="Doc"
-root=/opt/intrahouse
-
+name_service="intrahouse-c"
+root=/opt/$name_service
+project_path=~/$name_service
+port=8088
 mkdir -p $root
 
 function getLinuxUrl {
@@ -43,6 +45,19 @@ case "$OSTYPE" in
   *)        echo -e "\033[0;33m Error:\033[0;31m Unknown operating system\033[0;35m $OSTYPE\033[0;31m, installation aborted!" && exit ;; #UNKNOWN
 esac
 
-echo $MACHINE_TYPE
-curl -sL -o $root/install.sh $url
-. $root/install.sh
+
+# curl -sL -o $root/install.sh $url
+# . $root/install.sh
+
+myip=""
+while IFS=$': \t' read -a line ;do
+    [ -z "${line%inet}" ] && ip=${line[${#line[1]}>4?1:2]} &&
+        [ "${ip#127.0.0.1}" ] && myip="http://$ip:8088/pm/ $myip"
+done< <(LANG=C /sbin/ifconfig)
+
+echo -e "\033[0;34m"
+echo "-----------------------------------------------------------------------------------"
+echo ""
+echo -e "\033[0;36m Server start:\033[0;35m $myip"
+echo -e "\033[0;36m Complete! Thank you."
+echo -e "\033[0m"

@@ -90,7 +90,6 @@ rm -fr ./node.tar.xz
 
 cd ./backend
 export PATH=$root/node/bin:$PATH
-$root/node/bin/npm -v
 $root/node/bin/npm i
 
 #-------------- end
@@ -115,23 +114,23 @@ esac
 
 if [[ $type_service == "systemd" ]]; then
 
-  service intrahouse stop > /dev/null
-  path_service="/etc/systemd/system/intrahouse.service"
+  service $name_service stop > /dev/null
+  path_service="/etc/systemd/system/$name_service.service"
 
   rm -fr $path_service
   touch $path_service
 
-  cat > $path_service << "EOF"
-  description=intrahouse
+  cat > $path_service <<EOF
+  description=$name_service
 
   [Service]
-  WorkingDirectory=/opt/intrahouse/backend
-  ExecStart=/opt/intrahouse/node/bin/node /opt/intrahouse/backend/app.js prod
+  WorkingDirectory=/opt/$name_service/backend
+  ExecStart=/opt/$name_service/node/bin/node /opt/$name_service/backend/app.js prod
   Restart=always
    RestartSec=5
   StandardOutput=syslog
   StandardError=syslog
-  SyslogIdentifier=intrahouse
+  SyslogIdentifier=$name_service
 
   [Install]
   WantedBy=multi-user.target
@@ -142,43 +141,43 @@ EOF
   systemctl daemon-reload
   systemctl enable
 
-  service intrahouse start
-  systemctl status intrahouse
+  service $name_service start
+  systemctl status $name_service
 fi
 
 if [[ $type_service == "upstart" ]]; then
 
-  service intrahouse stop 2> /dev/null
-  path_service="/etc/init/intrahouse.conf"
+  service $name_service stop 2> /dev/null
+  path_service="/etc/init/$name_service.conf"
 
   rm -fr $path_service
   touch $path_service
 
-  cat > $path_service << "EOF"
+  cat > $path_service <<EOF
   start on filesystem and started networking
   respawn
-  chdir /opt/intrahouse/backend
+  chdir /opt/$name_service/backend
   env NODE_ENV=production
 
-  exec /opt/intrahouse/node/bin/node /opt/intrahouse/backend/app.js prod
+  exec /opt/$name_service/node/bin/node /opt/$name_service/backend/app.js prod
 EOF
 
-service intrahouse start
+service $name_service start
 fi
 
 if [[ $type_service == "sysv" ]]; then
 
-  service intrahouse stop > /dev/null
-  path_service="/etc/init.d/intrahouse"
+  service $name_service stop > /dev/null
+  path_service="/etc/init.d/$name_service"
 
   rm -fr $path_service
   touch $path_service
   chmod 755 $path_service
 
-  cat > $path_service << "EOF"
+  cat > $path_service <<EOF
     #!/bin/sh
     ### BEGIN INIT INFO
-    # Provides:          intrahouse
+    # Provides:          $name_service
     # Required-Start:    $remote_fs $syslog
     # Required-Stop:     $remote_fs $syslog
     # Default-Start:     2 3 4 5
@@ -187,8 +186,8 @@ if [[ $type_service == "sysv" ]]; then
     # Description:       Enable service provided by daemon.
     ### END INIT INFO
 
-    dir="/opt/intrahouse/backend/"
-    cmd="/opt/intrahouse/node/bin/node /opt/intrahouse/backend/app.js prod"
+    dir="/opt/$name_service/backend/"
+    cmd="/opt/$name_service/node/bin/node /opt/$name_service/backend/app.js prod"
     user=""
 
     name=`basename $0`
@@ -277,14 +276,9 @@ if [[ $type_service == "sysv" ]]; then
     exit 0
 EOF
 
-service intrahouse start > /dev/null
-service intrahouse status
+service $name_service start > /dev/null
+service $name_service status
 
 fi
 
 #-------------- end
-
-
-echo -e "\033[0;36m"
-echo "Complete! Thank you."
-echo -e "\033[0m"

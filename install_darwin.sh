@@ -73,26 +73,26 @@ echo -e "\033[0;36m"
 echo -e "...register service \033[0m"
 echo ""
 
-path_service=/Library/LaunchAgents/intrahouse.plist
+path_service=/Library/LaunchAgents/$name_service.plist
 
 sudo rm -frd $path_service
 
-cat > $path_service << "EOF"
+cat > $path_service <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 
   <key>Label</key>
-    <string>intrahouse</string>
+    <string>$name_service</string>
 
   <key>WorkingDirectory</key>
-    <string>/opt/intrahouse/backend</string>
+    <string>/opt/$name_service/backend</string>
 
   <key>ProgramArguments</key>
   <array>
-    <string>/opt/intrahouse/node/bin/node</string>
-    <string>/opt/intrahouse/backend/app.js</string>
+    <string>/opt/$name_service/node/bin/node</string>
+    <string>/opt/$name_service/backend/app.js</string>
     <string>prod</string>
   </array>
 
@@ -103,30 +103,25 @@ cat > $path_service << "EOF"
     <true/>
 
   <key>StandardOutPath</key>
-    <string>/opt/intrahouse/launchdOutput.log</string>
+    <string>/opt/$name_service/launchdOutput.log</string>
 
   <key>StandardErrorPath</key>
-    <string>/opt/intrahouse/launchdErrors.log</string>
+    <string>/opt/$name_service/launchdErrors.log</string>
 
 
 </dict>
 </plist>
 EOF
 
-sudo launchctl stop intrahouse
-sudo launchctl remove intrahouse
+sudo launchctl stop $name_service
+sudo launchctl remove $name_service
 
-sudo chown root /Library/LaunchAgents/intrahouse.plist
-sudo chmod 644 /Library/LaunchAgents/intrahouse.plist
-sudo launchctl load /Library/LaunchAgents/intrahouse.plist
+sudo chown root /Library/LaunchAgents/$name_service.plist
+sudo chmod 644 /Library/LaunchAgents/$name_service.plist
+sudo launchctl load /Library/LaunchAgents/$name_service.plist
 
-sudo launchctl start intrahouse
+sudo launchctl start $name_service
 
-sudo launchctl list | grep intrahouse
+sudo launchctl list | grep $name_service
 
 #-------------- end
-
-
-echo -e "\033[0;36m"
-echo "Complete! Thank you."
-echo -e "\033[0m"
