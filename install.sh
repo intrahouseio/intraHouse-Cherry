@@ -78,7 +78,7 @@ esac
  }
 EOF
 
-chmod 755 $root/config.json
+chmod 744 $root/config.json
 
 #-------------- end
 
