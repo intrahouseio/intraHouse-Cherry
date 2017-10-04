@@ -80,6 +80,13 @@ echo -e "\033[0m"
 
 unzip ./intrahouse-lite.zip > /dev/null
 
+if [ -d "./project" ]; then
+  rm -fr $project_path
+  mkdir -p $project_path
+  cp -fr ./project/* $project_path/lite
+  rm -fr ./project
+fi
+
 mkdir -p node
 cd ./node
 tar xf ./../node.tar.xz --strip 1

@@ -43,7 +43,6 @@ EOF
 #-------------- install start
 
 mkdir -p $root
-mkdir -p $project_path
 
 function getLinuxUrl {
   check=$(apt-get 2> /dev/null || echo "false" )
