@@ -74,7 +74,7 @@ esac
  cat > $root/config.json <<EOF
  {
    "port":$port,
-   "project":"$project_path/lite",
+   "project":"$project_path/lite"
  }
 EOF
 
