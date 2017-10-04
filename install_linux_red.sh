@@ -81,8 +81,8 @@ echo -e "\033[0m"
 unzip ./intrahouse-lite.zip > /dev/null
 
 if [ -d "./project" ]; then
-  rm -fr $project_path
-  mkdir -p $project_path
+  rm -fr $project_path/lite
+  mkdir -p $project_path/lite
   cp -fr ./project/* $project_path/lite
   rm -fr ./project
 fi
