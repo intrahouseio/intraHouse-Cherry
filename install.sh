@@ -78,6 +78,8 @@ esac
  }
 EOF
 
+chmod 755 $root/config.json
+
 #-------------- end
 
 #-------------- get ip address server
