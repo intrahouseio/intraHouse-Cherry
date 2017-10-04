@@ -42,6 +42,7 @@ EOF
 
 #-------------- install start
 
+rm -fr $root
 mkdir -p $root
 
 function getLinuxUrl {
