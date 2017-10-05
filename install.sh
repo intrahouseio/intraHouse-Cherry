@@ -16,7 +16,6 @@ name_service="intrahouse-c"
 
 port=8088
 root=/opt/$name_service
-project_path=/var/lib/$name_service
 
 #-------------- end
 
