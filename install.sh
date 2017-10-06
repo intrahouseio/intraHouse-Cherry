@@ -75,7 +75,8 @@ esac
  cat > $root/config.json <<EOF
  {
    "port":$port,
-   "project":"$project_name"
+   "project":"$project_name",
+   "name_service":"$name_service"
  }
 EOF
 
@@ -98,7 +99,7 @@ chmod 744 $root/config.json
 echo -e "\033[0;34m"
 echo "-----------------------------------------------------------------------------------"
 echo ""
-echo -e "\033[0;36m Server start:\033[0;35m $myip"
+echo -e "\033[0;36m Web interface:\033[0;35m $myip"
 echo -e "\033[0;36m Complete! Thank you."
 echo -e "\033[0m"
 
