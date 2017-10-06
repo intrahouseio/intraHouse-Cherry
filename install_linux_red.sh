@@ -130,7 +130,7 @@ if [[ $type_service == "systemd" ]]; then
   description=$name_service
 
   [Service]
-  WorkingDirectory=/opt/$name_service/backend
+  WorkingDirectory=/opt/$name_service
   ExecStart=/opt/$name_service/node/bin/node /opt/$name_service/backend/app.js prod
   Restart=always
    RestartSec=5
@@ -162,7 +162,7 @@ if [[ $type_service == "upstart" ]]; then
   cat > $path_service <<EOF
   start on filesystem and started networking
   respawn
-  chdir /opt/$name_service/backend
+  chdir /opt/$name_service
   env NODE_ENV=production
 
   exec /opt/$name_service/node/bin/node /opt/$name_service/backend/app.js prod
@@ -192,7 +192,7 @@ if [[ $type_service == "sysv" ]]; then
     # Description:       Enable service provided by daemon.
     ### END INIT INFO
 
-    dir="/opt/$name_service/backend/"
+    dir="/opt/$name_service"
     cmd="/opt/$name_service/node/bin/node /opt/$name_service/backend/app.js prod"
     user=""
 

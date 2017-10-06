@@ -13,10 +13,11 @@ fi
 
 repo_name="Doc"
 name_service="intrahouse-c"
+project_name="project1"
 
 port=8088
 root=/opt/$name_service
-project_path=/var/lib/$name_service
+project_path=/var/lib/$name_service/$project_name
 
 #-------------- end
 
@@ -74,7 +75,7 @@ esac
  cat > $root/config.json <<EOF
  {
    "port":$port,
-   "project":"$project_path/lite"
+   "project":"$project_name"
  }
 EOF
 

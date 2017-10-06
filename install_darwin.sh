@@ -94,7 +94,7 @@ cat > $path_service <<EOF
     <string>$name_service</string>
 
   <key>WorkingDirectory</key>
-    <string>/opt/$name_service/backend</string>
+    <string>/opt/$name_service</string>
 
   <key>ProgramArguments</key>
   <array>
