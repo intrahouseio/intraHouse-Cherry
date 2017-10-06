@@ -58,8 +58,7 @@ case $(uname -m) in
 esac
 
 echo "search latest"
-# file=$(curl -s https://api.github.com/repos/intrahouseio/$repo_name/releases/latest | grep browser_download_url | cut -d '"' -f 4)
-file="http://192.168.0.111:3000/api/intrahouse/intrahouse-lite.zip"
+file=$(curl -s https://api.github.com/repos/intrahouseio/$repo_name/releases/latest | grep browser_download_url | cut -d '"' -f 4)
 echo -e "latest found: \033[0;32m $file \033[0m"
 
 echo "get latest"
