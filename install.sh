@@ -17,7 +17,7 @@ project_name="project1"
 
 port=8088
 root=/opt/$name_service
-project_path=/var/lib/$name_service/$project_name
+project_path=/var/lib/$name_service/projects/$project_name
 
 #-------------- end
 
