@@ -1,5 +1,5 @@
 
-## macOS
+## Mac OS
 
 `curl -sl https://raw.githubusercontent.com/intrahouseio/intraHouse-Cherry/master/install.sh | sudo -E bash`
 
