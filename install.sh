@@ -11,7 +11,7 @@ fi
 
 #-------------- options
 
-repo_name="Doc"
+repo_name="intraHouse-Cherry"
 name_service="intrahouse-c"
 project_name="project1"
 port=8088
