@@ -145,10 +145,10 @@ EOF
   chmod 755 $path_service
 
   systemctl daemon-reload
-  systemctl enable
+  systemctl enable $name_service
 
   service $name_service start
-  systemctl status $name_service
+  service $name_service status
 fi
 
 if [[ $type_service == "upstart" ]]; then
@@ -168,6 +168,7 @@ if [[ $type_service == "upstart" ]]; then
   exec /opt/$name_service/node/bin/node /opt/$name_service/backend/app.js prod
 EOF
 
+rm /etc/init/$name_service.override
 service $name_service start
 fi
 
