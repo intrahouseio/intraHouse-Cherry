@@ -1,7 +1,7 @@
 
-## macOS
+## Mac OS
 
-`curl -sl https://raw.githubusercontent.com/intrahouseio/Doc/master/install.sh | sudo -E bash`
+`curl -sl https://raw.githubusercontent.com/intrahouseio/intraHouse-Cherry/master/install.sh | sudo -E bash`
 
 ###### Supported versions:
 * **Old versions** (not tested)
@@ -12,7 +12,7 @@
 
 ## Debian and Ubuntu
 
-`curl -sl https://raw.githubusercontent.com/intrahouseio/Doc/master/install.sh | sudo -E bash`
+`curl -sl https://raw.githubusercontent.com/intrahouseio/intraHouse-Cherry/master/install.sh | sudo -E bash`
 
 ###### Available architectures:
 
@@ -34,7 +34,7 @@
 
 ## Red Hat and CentOS.
 
-`curl -sl https://raw.githubusercontent.com/intrahouseio/Doc/master/install.sh | sudo -E bash`
+`curl -sl https://raw.githubusercontent.com/intrahouseio/intraHouse-Cherry/master/install.sh | sudo -E bash`
 
 ###### Available architectures:
 
