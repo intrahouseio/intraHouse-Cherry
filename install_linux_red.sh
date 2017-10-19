@@ -208,7 +208,7 @@ get_pid() {
 }
 
 is_running() {
-    [ -f "\$pid_file" ] && ps -p \`get_pid\` > /dev/null 2>&1
+    [ -f "\$pid_file" ] && ps ax | grep -v grep | grep \`get_pid\` > /dev/null 2>&1
 }
 
 case "\$1" in
