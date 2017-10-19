@@ -29,15 +29,17 @@ echo -e "\033[0;33m"
 echo -e "Download:"
 echo -e "\033[0m"
 
-echo "search latest"
+echo "search $name_service"
 file=$(curl -s https://api.github.com/repos/intrahouseio/$repo_name/releases/latest | grep browser_download_url | cut -d '"' -f 4)
 echo -e "latest found: \033[0;32m $file \033[0m"
 
-echo "get latest"
-curl -sL -o intrahouse-lite.zip $file
+echo -e ""
+echo -e "\033[0;34m get $name_service \033[0;35m"
+curl --progress-bar -L -o intrahouse-lite.zip $file
 
-echo "get node"
-curl -sL -o node.tar.xz "https://nodejs.org/dist/v8.6.0/node-v8.6.0-darwin-x64.tar.gz"
+echo -e ""
+echo -e "\033[0;34m get nodeJS \033[0;35m"
+curl --progress-bar -L -o node.tar.xz "https://nodejs.org/dist/v8.6.0/node-v8.6.0-darwin-x64.tar.gz"
 
 
 #-------------- end
