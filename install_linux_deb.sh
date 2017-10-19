@@ -285,6 +285,8 @@ if [[ $type_service == "sysv" ]]; then
     exit 0
 EOF
 
+update-rc.d $name_service defaults
+
 service $name_service start > /dev/null
 service $name_service status
 
