@@ -198,7 +198,7 @@ dir="/opt/$name_service"
 cmd="/opt/$name_service/node/bin/node /opt/$name_service/backend/app.js prod"
 user=""
 
-name=\`basename \$0\`
+name=$name_service
 pid_file="/var/run/\$name.pid"
 stdout_log="/var/log/\$name.log"
 stderr_log="/var/log/\$name.err"
