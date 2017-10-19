@@ -176,7 +176,7 @@ fi
 
 if [[ $type_service == "sysv" ]]; then
 
-  service $name_service stop > /dev/null
+  service $name_service stop 2> /dev/null
   path_service="/etc/init.d/$name_service"
 
   rm -fr $path_service
