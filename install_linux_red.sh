@@ -284,7 +284,7 @@ esac
 exit 0
 EOF
 
-update-rc.d $name_service defaults
+chkconfig $name_service on
 
 service $name_service start > /dev/null
 service $name_service status
