@@ -161,6 +161,7 @@ if [[ $type_service == "upstart" ]]; then
 
   cat > $path_service <<EOF
   start on filesystem and started networking
+  stop on shutdown
   respawn
   chdir /opt/$name_service
   env NODE_ENV=production
@@ -168,7 +169,6 @@ if [[ $type_service == "upstart" ]]; then
   exec /opt/$name_service/node/bin/node /opt/$name_service/backend/app.js prod
 EOF
 
-rm /etc/init/$name_service.override
 service $name_service start
 fi
 
@@ -185,8 +185,8 @@ if [[ $type_service == "sysv" ]]; then
     #!/bin/sh
     ### BEGIN INIT INFO
     # Provides:          $name_service
-    # Required-Start:    $remote_fs $syslog
-    # Required-Stop:     $remote_fs $syslog
+    # Required-Start:    $local_fs $network $remote_fs $named $time
+    # Required-Stop:     $local_fs $network $remote_fs $named
     # Default-Start:     2 3 4 5
     # Default-Stop:      0 1 6
     # Short-Description: Start daemon at boot time
