@@ -185,8 +185,8 @@ if [[ $type_service == "sysv" ]]; then
     #!/bin/sh
     ### BEGIN INIT INFO
     # Provides:          $name_service
-    # Required-Start:    $remote_fs $syslog
-    # Required-Stop:     $remote_fs $syslog
+    # Required-Start:    \$local_fs \$network \$remote_fs \$syslog \$named \$time
+    # Required-Stop:     \$local_fs \$network \$remote_fs \$syslog \$named 
     # Default-Start:     2 3 4 5
     # Default-Stop:      0 1 6
     # Short-Description: Start daemon at boot time
@@ -197,44 +197,44 @@ if [[ $type_service == "sysv" ]]; then
     cmd="/opt/$name_service/node/bin/node /opt/$name_service/backend/app.js prod"
     user=""
 
-    name=`basename $0`
-    pid_file="/var/run/$name.pid"
-    stdout_log="/var/log/$name.log"
-    stderr_log="/var/log/$name.err"
+    name=\`basename \$0\`
+    pid_file="/var/run/\$name.pid"
+    stdout_log="/var/log/\$name.log"
+    stderr_log="/var/log/\$name.err"
 
     get_pid() {
-        cat "$pid_file"
+        cat "\$pid_file"
     }
 
     is_running() {
-        [ -f "$pid_file" ] && ps -p `get_pid` > /dev/null 2>&1
+        [ -f "\$pid_file" ] && ps -p \`get_pid\` > /dev/null 2>&1
     }
 
-    case "$1" in
+    case "\$1" in
         start)
         if is_running; then
             echo "Already started"
         else
-            echo "Starting $name"
-            cd "$dir"
-            if [ -z "$user" ]; then
-                sudo $cmd >> "$stdout_log" 2>> "$stderr_log" &
+            echo "Starting \$name"
+            cd "\$dir"
+            if [ -z "\$user" ]; then
+                sudo \$cmd >> "\$stdout_log" 2>> "\$stderr_log" &
             else
-                sudo -u "$user" $cmd >> "$stdout_log" 2>> "$stderr_log" &
+                sudo -u "\$user" \$cmd >> "\$stdout_log" 2>> "\$stderr_log" &
             fi
-            echo $! > "$pid_file"
+            echo \$! > "\$pid_file"
             if ! is_running; then
-                echo "Unable to start, see $stdout_log and $stderr_log"
+                echo "Unable to start, see \$stdout_log and \$stderr_log"
                 exit 1
             fi
         fi
         ;;
         stop)
         if is_running; then
-            echo -n "Stopping $name.."
-            kill `get_pid`
+            echo -n "Stopping \$name.."
+            kill \`get_pid\`
             for i in 1 2 3 4 5 6 7 8 9 10
-            # for i in `seq 10`
+            # for i in \`seq 10\`
             do
                 if ! is_running; then
                     break
@@ -250,8 +250,8 @@ if [[ $type_service == "sysv" ]]; then
                 exit 1
             else
                 echo "Stopped"
-                if [ -f "$pid_file" ]; then
-                    rm "$pid_file"
+                if [ -f "\$pid_file" ]; then
+                    rm "\$pid_file"
                 fi
             fi
         else
@@ -259,23 +259,23 @@ if [[ $type_service == "sysv" ]]; then
         fi
         ;;
         restart)
-        $0 stop
+        \$0 stop
         if is_running; then
             echo "Unable to stop, will not attempt to start"
             exit 1
         fi
-        $0 start
+        \$0 start
         ;;
         status)
         if is_running; then
-            echo "[\033[0;32m ok \033[0m] $name is running."
+            echo -e "[\033[0;32m ok \033[0m] \$name is running."
         else
-            echo "[\033[0;31m FAIL \033[0m] $name is not running ... \033[0;31mfailed! \033[0m]"
+            echo -e "[\033[0;31m FAIL \033[0m] \$name is not running ... \033[0;31mfailed! \033[0m]"
             exit 1
         fi
         ;;
         *)
-        echo "Usage: $0 {start|stop|restart|status}"
+        echo "Usage: \$0 {start|stop|restart|status}"
         exit 1
         ;;
     esac
