@@ -185,8 +185,8 @@ if [[ $type_service == "sysv" ]]; then
     #!/bin/sh
     ### BEGIN INIT INFO
     # Provides:          $name_service
-    # Required-Start:    $local_fs $network $remote_fs $syslog $named $time
-    # Required-Stop:     $local_fs $network $remote_fs $syslog $named
+    # Required-Start:    $remote_fs $syslog
+    # Required-Stop:     $remote_fs $syslog
     # Default-Start:     2 3 4 5
     # Default-Stop:      0 1 6
     # Short-Description: Start daemon at boot time
