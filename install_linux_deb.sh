@@ -186,7 +186,7 @@ if [[ $type_service == "sysv" ]]; then
     ### BEGIN INIT INFO
     # Provides:          $name_service
     # Required-Start:    \$local_fs \$network \$remote_fs \$syslog \$named \$time
-    # Required-Stop:     \$local_fs \$network \$remote_fs \$syslog \$named 
+    # Required-Stop:     \$local_fs \$network \$remote_fs \$syslog \$named
     # Default-Start:     2 3 4 5
     # Default-Stop:      0 1 6
     # Short-Description: Start daemon at boot time
@@ -268,9 +268,9 @@ if [[ $type_service == "sysv" ]]; then
         ;;
         status)
         if is_running; then
-            echo -e "[\033[0;32m ok \033[0m] \$name is running."
+            echo "[\033[0;32m ok \033[0m] \$name is running."
         else
-            echo -e "[\033[0;31m FAIL \033[0m] \$name is not running ... \033[0;31mfailed! \033[0m]"
+            echo "[\033[0;31m FAIL \033[0m] \$name is not running ... \033[0;31mfailed! \033[0m]"
             exit 1
         fi
         ;;
