@@ -62,10 +62,10 @@ file=$(curl -s https://api.github.com/repos/intrahouseio/$repo_name/releases/lat
 echo -e "latest found: \033[0;32m $file \033[0m"
 
 echo "get latest"
-curl -sL -o intrahouse-lite.zip $file
+curl --progress-bar -sL -o intrahouse-lite.zip $file
 
 echo "get node"
-curl -sL -o node.tar.xz "https://nodejs.org/dist/v8.6.0/node-v8.6.0-linux-$processor.tar.xz"
+curl --progress-bar -sL -o node.tar.xz "https://nodejs.org/dist/v8.6.0/node-v8.6.0-linux-$processor.tar.xz"
 
 
 #-------------- end
