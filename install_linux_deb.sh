@@ -117,7 +117,7 @@ case "$distro" in
   precise*) type_service="upstart" ;; # ubuntu 12
   jessie*)  type_service="systemd" ;; # debian 8
   wheezy*)  type_service="sysv" ;; # debian 7
-  *)        type_service="upstart" ;;
+  *)        type_service="systemd" ;;
 esac
 
 if [[ $type_service == "systemd" ]]; then

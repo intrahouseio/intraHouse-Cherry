@@ -116,7 +116,7 @@ case "$distro" in
   "Enterprise Linux Server release 6"*)  type_service="upstart" ;; # rhel 6
   "release 7"*)                          type_service="systemd" ;; # Centos 7
   "release 6"*)                          type_service="sysv" ;; # Centos 6
-  *)                                     type_service="sysv" ;;
+  *)                                     type_service="systemd" ;;
 esac
 
 if [[ $type_service == "systemd" ]]; then
