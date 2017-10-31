@@ -155,7 +155,7 @@ fi
 
 if [[ $type_service == "upstart" ]]; then
 
-  service $name_service stop 2> /dev/null
+  $(service $name_service stop 2> /dev/null)
   path_service="/etc/init/$name_service.conf"
 
   rm -fr $path_service
