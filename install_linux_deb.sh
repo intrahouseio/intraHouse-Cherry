@@ -122,7 +122,7 @@ esac
 
 if [[ $type_service == "systemd" ]]; then
 
-  service $name_service stop > /dev/null
+  $(service $name_service stop 2> /dev/null)
   path_service="/etc/systemd/system/$name_service.service"
 
   rm -fr $path_service
