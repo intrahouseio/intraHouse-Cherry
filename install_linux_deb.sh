@@ -109,7 +109,7 @@ echo -e "\033[0;36m"
 echo -e "...register service \033[0m"
 echo ""
 
-distro=$(lsb_release -c -s)
+distro=$(lsb_release -c -s 2> /dev/null) || distro=$(cat /etc/os-release | grep -oP "VERSION=\".*\(\K(.*)\)") && distro=${distro%?}
 
 case "$distro" in
   xenial*)  type_service="systemd" ;; # ubuntu 16
