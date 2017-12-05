@@ -90,7 +90,7 @@ chmod 744 $root/config.json
  while IFS=$': \t' read -a line ;do
      [ -z "${line%inet}" ] && ip=${line[${#line[1]}>4?1:2]} &&
          [ "${ip#127.0.0.1}" ] && myip="http://$ip:$port/pm/ $myip"
- done< <(LANG=C /sbin/ifconfig 2> /dev/nul || ip a)
+ done< <(LANG=C /sbin/ifconfig)
 
 #-------------- end
 

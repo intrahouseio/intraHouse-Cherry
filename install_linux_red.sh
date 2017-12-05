@@ -21,6 +21,7 @@ echo -e "\033[0;33m"
 echo -e "Check dependencies:"
 echo -e "\033[0m"
 
+check_iconfig=$(ifconfig 2> /dev/null || echo "false" )
 check_unzip=$(unzip 2> /dev/null || echo "false" )
 check_xz=$(xz -h 2> /dev/null || echo "false" )
 
@@ -40,6 +41,15 @@ else
 
   yum update > /dev/null
   yum install -y xz-utils > /dev/null
+fi
+
+if [[ $check_iconfig != "false" ]]; then
+  echo -e "\033[0;35m net-tools:\033[0;32m true \033[0m"
+else
+  echo -e "\033[0;35m net-tools:\033[0;31m false \033[0m --> will be installed"
+
+  yum update > /dev/null
+  yum install -y net-tools > /dev/null
 fi
 
 #-------------- end
