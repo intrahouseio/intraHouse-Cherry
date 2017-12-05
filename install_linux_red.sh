@@ -142,7 +142,7 @@ if [[ $type_service == "systemd" ]]; then
   [Install]
   WantedBy=multi-user.target
 EOF
-
+  export SYSTEMD_PAGER=''
   chmod 755 $path_service
 
   systemctl daemon-reload
