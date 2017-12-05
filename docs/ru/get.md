@@ -30,6 +30,7 @@
 
 * **Debian 7** (wheezy)
 * **Debian 8** (jessie)
+* **Debian 9** (stretch)
 
 
 ## Red Hat and CentOS.
