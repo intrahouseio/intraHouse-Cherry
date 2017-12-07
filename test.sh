@@ -42,12 +42,12 @@ echo -e "\033[0m"
 lsb_release -a
 
 echo -e "\033[0;33m"
-echo "browsers"
+echo "browsers:"
 echo -e "\033[0m"
 google-chrome --version
 
 echo -e "\033[0;33m"
-echo -e "dependencies"
+echo -e "dependencies:"
 echo -e "\033[0m"
 
 #iconfig=$(ifconfig 2> /dev/null || echo "false" )
