@@ -61,7 +61,7 @@ echo ""
 checkv "/opt/intrahouse-c/node/bin/node -v" "nodejs (local)"
 checkv "/opt/intrahouse-c/node/bin/node /opt/intrahouse-c/node/bin/npm -v" "npm (local)"
 echo ""
-checkv "nodejs -v" "nodejs (system)"
+checkv "node -v" "nodejs (system)"
 checkv "npm -v" "npm (system)"
 
 echo -e "\033[0;34m"
