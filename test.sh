@@ -40,14 +40,11 @@ echo "------START TEST------"
 echo -e "\033[0;33m"
 echo "system:"
 echo -e "\033[0m"
-case $(uname -m) in
-  armv6*)  processor="armv6l" ;;
-  armv7*)  processor="armv7l" ;;
-  armv8*)  processor="arm64" ;;
-  *)       [[ $(getconf LONG_BIT) = "64" ]] && processor="x64" || processor="x86" ;;
-esac
+
 lsb_release -a
-echo "Architecture:   $processor"
+echo ""
+echo "Arch (proc):    $(uname -m)"
+echo "Arch (os):      $(getconf LONG_BIT)"
 echo ""
 uname -a
 
