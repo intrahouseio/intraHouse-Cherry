@@ -61,9 +61,6 @@ echo -e "\033[0;33m"
 echo -e "dependencies:"
 echo -e "\033[0m"
 
-#iconfig=$(ifconfig 2> /dev/null || echo "false" )
-#unzip=$(unzip 2> /dev/null || echo "false" )
-#xz=$(xz -h 2> /dev/null || echo "false" )
 
 check "ifconfig" "net-tools"
 check "unzip" "unzip"
