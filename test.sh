@@ -23,10 +23,10 @@ function check {
 function checkv {
   test=$($1 2> /dev/null || echo "false" )
   if [[ $test != "false" ]]; then
-    echo -e "$2:\033[0;32m true \033[0m --> $test"
+    echo -e "$2:\033[0;32m true\033[0m --> $test"
   else
     error=$($1 2>&1 >/dev/null)
-    echo -e "$2:\033[0;31m false \033[0m --> $error"
+    echo -e "$2:\033[0;31m false\033[0m --> $error"
   fi
 }
 
