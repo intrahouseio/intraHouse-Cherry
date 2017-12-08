@@ -64,7 +64,7 @@ case $(uname -m) in
   armv6*)  processor="armv6l" ;;
   armv7*)  processor="armv7l" ;;
   armv8*)  processor="arm64" ;;
-  *)       ((1<<32)) && processor="x64" || processor="x86" ;;
+  *)       [[ $(getconf LONG_BIT) = "64" ]] && processor="x64" || processor="x86" ;;
 esac
 
 echo "search $name_service"
