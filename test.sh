@@ -55,6 +55,7 @@ echo -e "\033[0;33m"
 echo "browsers:"
 echo -e "\033[0m"
 checkv "google-chrome --version" "google-chrome"
+checkv "firefox -v" "firefox"
 
 echo -e "\033[0;33m"
 echo -e "dependencies:"
