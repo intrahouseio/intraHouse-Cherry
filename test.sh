@@ -59,6 +59,7 @@ echo -e "dependencies:"
 echo -e "\033[0m"
 
 
+check "getconf LONG_BIT" "getconf"
 check "ifconfig" "net-tools"
 check "unzip" "unzip"
 check "xz -h" "xz-utils"
