@@ -25,7 +25,8 @@ function checkv {
   if [[ $test != "false" ]]; then
     echo -e "$2:\033[0;32m true \033[0m --> $test"
   else
-    echo -e "$2:\033[0;31m false \033[0m"
+    error=$($1 2>&1 >/dev/null)
+    echo -e "$2:\033[0;31m false \033[0m --> $error"
   fi
 }
 
@@ -39,12 +40,21 @@ echo "------START TEST------"
 echo -e "\033[0;33m"
 echo "system:"
 echo -e "\033[0m"
+case $(uname -m) in
+  armv6*)  processor="armv6l" ;;
+  armv7*)  processor="armv7l" ;;
+  armv8*)  processor="arm64" ;;
+  *)       ((1<<32)) && processor="x64" || processor="x86" ;;
+esac
 lsb_release -a
+echo "Architecture:   $processor"
+echo ""
+uname -a
 
 echo -e "\033[0;33m"
 echo "browsers:"
 echo -e "\033[0m"
-google-chrome --version
+checkv "google-chrome --version" "google-chrome"
 
 echo -e "\033[0;33m"
 echo -e "dependencies:"
@@ -62,7 +72,7 @@ checkv "/opt/intrahouse-c/node/bin/node -v" "nodejs (local)"
 checkv "/opt/intrahouse-c/node/bin/node /opt/intrahouse-c/node/bin/npm -v" "npm (local)"
 echo ""
 checkv "node -v" "nodejs (system)"
-checkv "npm -v" "npm (system)"
+checkv "npm1 -v" "npm (system)"
 
 echo -e "\033[0;34m"
 echo "------END TEST------"
