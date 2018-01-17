@@ -130,61 +130,7 @@ case "$distro" in
   *)        type_service="systemd" ;;
 esac
 
-if [[ $type_service == "systemd" ]]; then
-
-  $(service $name_service stop 2> /dev/null)
-  path_service="/etc/systemd/system/$name_service.service"
-
-  rm -fr $path_service
-  touch $path_service
-
-  cat > $path_service <<EOF
-  description=$name_service
-
-  [Service]
-  WorkingDirectory=/opt/$name_service
-  ExecStart=/opt/$name_service/node/bin/node /opt/$name_service/backend/app.js prod
-  Restart=always
-   RestartSec=5
-  StandardOutput=syslog
-  StandardError=syslog
-  SyslogIdentifier=$name_service
-
-  [Install]
-  WantedBy=multi-user.target
-EOF
-  export SYSTEMD_PAGER=''
-  chmod 755 $path_service
-
-  systemctl daemon-reload
-  systemctl enable $name_service
-
-  service $name_service start
-  service $name_service status
-fi
-
-if [[ $type_service == "upstart" ]]; then
-
-  $(service $name_service stop 2> /dev/null)
-  path_service="/etc/init/$name_service.conf"
-
-  rm -fr $path_service
-  touch $path_service
-
-  cat > $path_service <<EOF
-  start on filesystem and started networking
-  stop on shutdown
-  respawn
-  chdir /opt/$name_service
-  env NODE_ENV=production
-
-  exec /opt/$name_service/node/bin/node /opt/$name_service/backend/app.js prod
-EOF
-
-service $name_service start
-fi
-
-if [[ $type_service == "sysv" ]]; then
+# if [[ $type_service == "sysv" ]]; then
 
   service $name_service stop 2> /dev/null
   path_service="/etc/init.d/$name_service"
@@ -297,9 +243,60 @@ EOF
 
 update-rc.d $name_service defaults
 
-service $name_service start > /dev/null
-service $name_service status
+# fi
+
+if [[ $type_service == "systemd" ]]; then
+
+  $(service $name_service stop 2> /dev/null)
+  path_service="/etc/systemd/system/$name_service.service"
+
+  rm -fr $path_service
+  touch $path_service
+
+  cat > $path_service <<EOF
+  description=$name_service
+
+  [Service]
+  WorkingDirectory=/opt/$name_service
+  ExecStart=/opt/$name_service/node/bin/node /opt/$name_service/backend/app.js prod
+  Restart=always
+   RestartSec=5
+  StandardOutput=syslog
+  StandardError=syslog
+  SyslogIdentifier=$name_service
+
+  [Install]
+  WantedBy=multi-user.target
+EOF
+  export SYSTEMD_PAGER=''
+  chmod 755 $path_service
+
+  systemctl daemon-reload
+  systemctl enable $name_service
 
 fi
+
+if [[ $type_service == "upstart" ]]; then
+
+  $(service $name_service stop 2> /dev/null)
+  path_service="/etc/init/$name_service.conf"
+
+  rm -fr $path_service
+  touch $path_service
+
+  cat > $path_service <<EOF
+  start on filesystem and started networking
+  stop on shutdown
+  respawn
+  chdir /opt/$name_service
+  env NODE_ENV=production
+
+  exec /opt/$name_service/node/bin/node /opt/$name_service/backend/app.js prod
+EOF
+
+fi
+
+service $name_service start > /dev/null
+service $name_service status
 
 #-------------- end
