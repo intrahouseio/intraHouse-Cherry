@@ -30,8 +30,8 @@ if [[ $check_unzip != "false" ]]; then
 else
   echo -e "\033[0;35m unzip:\033[0;31m false \033[0m --> will be installed"
 
-  apt-get update > /dev/null
-  apt-get install -y unzip > /dev/null
+  sudo apt-get update > /dev/null
+  sudo apt-get install -y unzip > /dev/null
 fi
 
 if [[ $check_xz != "false" ]]; then
@@ -39,8 +39,8 @@ if [[ $check_xz != "false" ]]; then
 else
   echo -e "\033[0;35m xz-utils:\033[0;31m false \033[0m --> will be installed"
 
-  apt-get update > /dev/null
-  apt-get install -y xz-utils > /dev/null
+  sudo apt-get update > /dev/null
+  sudo apt-get install -y xz-utils > /dev/null
 fi
 
 if [[ $check_iconfig != "false" ]]; then
@@ -48,8 +48,8 @@ if [[ $check_iconfig != "false" ]]; then
 else
   echo -e "\033[0;35m net-tools:\033[0;31m false \033[0m --> will be installed"
 
-  apt-get update > /dev/null
-  apt-get install -y net-tools > /dev/null
+  sudo apt-get update > /dev/null
+  sudo apt-get install -y net-tools > /dev/null
 fi
 
 #-------------- end
