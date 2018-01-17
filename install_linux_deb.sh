@@ -132,7 +132,7 @@ esac
 
 # if [[ $type_service == "sysv" ]]; then
 
-  service $name_service stop 2> /dev/null
+#  service $name_service stop 2> /dev/null
   path_service="/etc/init.d/$name_service"
 
   rm -fr $path_service
@@ -247,7 +247,7 @@ update-rc.d $name_service defaults
 
 if [[ $type_service == "systemd" ]]; then
 
-  $(service $name_service stop 2> /dev/null)
+#  $(service $name_service stop 2> /dev/null)
   path_service="/etc/systemd/system/$name_service.service"
 
   rm -fr $path_service
@@ -278,7 +278,7 @@ fi
 
 if [[ $type_service == "upstart" ]]; then
 
-  $(service $name_service stop 2> /dev/null)
+#  $(service $name_service stop 2> /dev/null)
   path_service="/etc/init/$name_service.conf"
 
   rm -fr $path_service
@@ -296,7 +296,7 @@ EOF
 
 fi
 
-service $name_service start > /dev/null
+service $name_service restart > /dev/null
 service $name_service status
 
 #-------------- end
