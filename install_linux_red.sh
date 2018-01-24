@@ -22,8 +22,18 @@ echo -e "Check dependencies:"
 echo -e "\033[0m"
 
 check_iconfig=$(ifconfig 2> /dev/null || echo "false" )
+check_zip=$(zip 2> /dev/null || echo "false" )
 check_unzip=$(unzip 2> /dev/null || echo "false" )
 check_xz=$(xz -h 2> /dev/null || echo "false" )
+
+if [[ $check_zip != "false" ]]; then
+  echo -e "\033[0;35m zip:\033[0;32m true \033[0m"
+else
+  echo -e "\033[0;35m zip:\033[0;31m false \033[0m --> will be installed"
+
+  yum update > /dev/null
+  yum install -y zip > /dev/null
+fi
 
 if [[ $check_unzip != "false" ]]; then
   echo -e "\033[0;35m unzip:\033[0;32m true \033[0m"
