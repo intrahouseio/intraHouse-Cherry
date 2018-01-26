@@ -22,7 +22,7 @@ echo -e "Check dependencies:"
 echo -e "\033[0m"
 
 check_iconfig=$(ifconfig 2> /dev/null || echo "false" )
-check_zip=$(zip 2> /dev/null || echo "false" )
+check_zip=$(zip -L 2> /dev/null || echo "false" )
 check_unzip=$(unzip 2> /dev/null || echo "false" )
 check_xz=$(xz -h 2> /dev/null || echo "false" )
 
