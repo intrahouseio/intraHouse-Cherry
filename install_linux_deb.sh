@@ -25,6 +25,7 @@ check_iconfig=$(ifconfig 2> /dev/null || echo "false" )
 check_zip=$(zip -L 2> /dev/null || echo "false" )
 check_unzip=$(unzip 2> /dev/null || echo "false" )
 check_xz=$(xz -h 2> /dev/null || echo "false" )
+check_rsync=$(rsync --version 2> /dev/null || echo "false" )
 
 if [[ $check_zip != "false" ]]; then
   echo -e "\033[0;35m zip:\033[0;32m true \033[0m"
@@ -60,6 +61,15 @@ else
 
   sudo apt-get update > /dev/null
   sudo apt-get install -y net-tools > /dev/null
+fi
+
+if [[ $check_rsync != "false" ]]; then
+  echo -e "\033[0;35m rsync:\033[0;32m true \033[0m"
+else
+  echo -e "\033[0;35m rsync:\033[0;31m false \033[0m --> will be installed"
+
+  sudo apt-get update > /dev/null
+  sudo apt-get install -y rsync > /dev/null
 fi
 
 #-------------- end
