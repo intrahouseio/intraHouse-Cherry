@@ -59,10 +59,13 @@ echo -e "dependencies:"
 echo -e "\033[0m"
 
 
+check "openssl version" "openssl"
 check "getconf LONG_BIT" "getconf"
 check "ifconfig" "net-tools"
+check "zip -L" "zip"
 check "unzip" "unzip"
 check "xz -h" "xz-utils"
+check "rsync --version" "rsync"
 echo ""
 checkv "/opt/intrahouse-c/node/bin/node -v" "nodejs (local)"
 checkv "/opt/intrahouse-c/node/bin/node /opt/intrahouse-c/node/bin/npm -v" "npm (local)"
