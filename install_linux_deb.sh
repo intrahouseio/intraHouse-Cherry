@@ -97,7 +97,7 @@ curl --progress-bar -L -o intrahouse-lite.zip $file
 
 echo -e "\033[0m"
 echo -e "get nodeJS \033[0;34m"
-curl --progress-bar -L -o node.tar.xz "https://nodejs.org/dist/v8.6.0/node-v8.6.0-linux-$processor.tar.xz"
+curl --progress-bar -L -o node.tar.xz "https://nodejs.org/dist/v8.7.0/node-v8.7.0-linux-$processor.tar.xz"
 
 
 #-------------- end
