@@ -6,7 +6,7 @@
 * Исправлено отражение легенды в виджите `График`
 
 ### Plugin Xiaomi MiHome - v0.0.11 (26.03.18)
-* add Neutral Wall Switch (ctrl_ln1.aq1)
+* add Neutral Wall Switch `ctrl_ln1.aq1`
 
 ### intraHouse-Cherry - v4.1.25 (14.03.18)
 
