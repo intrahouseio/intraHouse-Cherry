@@ -1,9 +1,14 @@
 ### intraHouse-Cherry - Unreleased
 
+* Добавлен индикатор ошибки для устройства
 * Добавлен виджет `График Timeline`
 * Добавлен текстовый редактор
 * Добавлены алерты
 * Исправлено отражение легенды в виджите `График`
+
+### Plugin Xiaomi MiHome - v0.0.12 (29.03.18)
+* add Wall Switch `ctrl_neutral1`
+* add Wall Switch `ctrl_neutral2`
 
 ### Plugin Xiaomi MiHome - v0.0.11 (26.03.18)
 * add Neutral Wall Switch `ctrl_ln1.aq1`
