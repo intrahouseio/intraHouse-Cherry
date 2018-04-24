@@ -9,6 +9,10 @@
 * Добавлены алерты
 * Исправлено отображение легенды в виджите `График`
 
+### Plugin Xiaomi MiHome - v0.0.15 (24.04.18)
+* add multiple gateways
+* plugin commands: add/remove device
+
 ### Plugin Xiaomi MiHome - v0.0.14 (03.04.18)
 * add Magic Cube `cube`
 * add Flood Sensor `sensor_wleak.aq1`
