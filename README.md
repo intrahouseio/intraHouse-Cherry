@@ -10,7 +10,7 @@
 
 ### Главная информация
 
-* [Общая информация](docs/ru/general.md)
+* [Общая информация](wiki/Architecture)
 * [Скачать](docs/ru/get.md)
 
 
