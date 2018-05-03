@@ -17,6 +17,11 @@
 
 * [Общая информация](https://github.com/intrahouseio/intraHouse-Cherry/wiki/Device-Set)
 
+### Сценарии
+
+* [Общая информация](https://github.com/intrahouseio/intraHouse-Cherry/wiki/Scenarios)
+* [Api](https://github.com/intrahouseio/intraHouse-Cherry/wiki/Scenarios-API)
+
 ### Плагины
 
 * [Общая информация](https://github.com/intrahouseio/intraHouse-Cherry/wiki/Concept-of-Plugins)
