@@ -13,15 +13,11 @@
 * [Общая информация](https://github.com/intrahouseio/intraHouse-Cherry/wiki/Architecture)
 * [Скачать](docs/ru/get.md)
 
-
-### API
-
-* [Общая информация](docs/ru/api.md)
-
-
 ### Plugins
 
-* [Общая информация](docs/ru/plugins.md)
+* [Общая информация](https://github.com/intrahouseio/intraHouse-Cherry/wiki/Concept-of-Plugins)
+* [Манифест](https://github.com/intrahouseio/intraHouse-Cherry/wiki/Hardware-plugins-manifest)
+* [Api](https://github.com/intrahouseio/intraHouse-Cherry/wiki/Plugin-API)
 
 
 ## Поддержка, обратная связь, новости
