@@ -13,7 +13,11 @@
 * [Общая информация](https://github.com/intrahouseio/intraHouse-Cherry/wiki/Architecture)
 * [Скачать](docs/ru/get.md)
 
-### Plugins
+### Устройства
+
+* [Общая информация](https://github.com/intrahouseio/intraHouse-Cherry/wiki/Device-Set)
+
+### Плагины
 
 * [Общая информация](https://github.com/intrahouseio/intraHouse-Cherry/wiki/Concept-of-Plugins)
 * [Манифест](https://github.com/intrahouseio/intraHouse-Cherry/wiki/Hardware-plugins-manifest)
