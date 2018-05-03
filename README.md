@@ -10,7 +10,7 @@
 
 ### Главная информация
 
-* [Общая информация](wiki/Architecture)
+* [Общая информация](https://github.com/intrahouseio/intraHouse-Cherry/wiki/Architecture)
 * [Скачать](docs/ru/get.md)
 
 
