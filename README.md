@@ -27,6 +27,7 @@
 * [Общая информация](https://github.com/intrahouseio/intraHouse-Cherry/wiki/Concept-of-Plugins)
 * [Манифест](https://github.com/intrahouseio/intraHouse-Cherry/wiki/Hardware-plugins-manifest)
 * [Api](https://github.com/intrahouseio/intraHouse-Cherry/wiki/Plugin-API)
+* [Список плагинов](https://github.com/intrahouseio/intraHouse-Cherry/wiki/Plugins-list)
 
 
 ## Поддержка, обратная связь, новости
