@@ -12,6 +12,7 @@
 
 * [Общая информация](https://github.com/intrahouseio/intraHouse-Cherry/wiki/Architecture)
 * [Скачать](docs/ru/get.md)
+* [История версий](CHANGELOG.md)
 
 ### Устройства
 
