@@ -18,6 +18,12 @@
 * Добавлены алерты в виде всплывающего окна
 * Исправлено отображение легенды в виджете `График`
 
+### Plugin P2P - v0.0.2 (14.05.18)
+* Новый плагин
+
+### Plugin Ping - v0.0.1 (11.05.18)
+* Новый плагин
+
 ### Plugin Xiaomi MiHome - v0.0.15 (24.04.18)
 * add multiple gateways
 * plugin commands: add/remove device
