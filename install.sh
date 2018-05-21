@@ -41,24 +41,10 @@ EOF
 
 #-------------- end
 
-#-------------- generate config
+#-------------- install start
 
 rm -fr $root
 mkdir -p $root
-
- cat > $root/config.json <<EOF
- {
-   "port":$port,
-   "project":"$project_name",
-   "name_service":"$name_service"
- }
-EOF
-
-chmod 744 $root/config.json
-
-#-------------- end
-
-#-------------- install start
 
 function getLinuxUrl {
   check=$(apt-get 2> /dev/null || echo "false" )

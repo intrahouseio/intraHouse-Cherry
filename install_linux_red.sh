@@ -15,6 +15,20 @@ cd $root
 
 #-------------- end
 
+#-------------- generate config
+
+ cat > $root/config.json <<EOF
+ {
+   "port":$port,
+   "project":"$project_name",
+   "name_service":"$name_service"
+ }
+EOF
+
+chmod 744 $root/config.json
+
+#-------------- end
+
 #-------------- check dependencies
 
 echo -e "\033[0;33m"
