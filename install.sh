@@ -41,10 +41,24 @@ EOF
 
 #-------------- end
 
-#-------------- install start
+#-------------- generate config
 
 rm -fr $root
 mkdir -p $root
+
+ cat > $root/config.json <<EOF
+ {
+   "port":$port,
+   "project":"$project_name",
+   "name_service":"$name_service"
+ }
+EOF
+
+chmod 744 $root/config.json
+
+#-------------- end
+
+#-------------- install start
 
 function getLinuxUrl {
   check=$(apt-get 2> /dev/null || echo "false" )
@@ -67,20 +81,6 @@ esac
 
  curl -sL -o $root/install.sh $url
  . $root/install.sh
-
-#-------------- end
-
-#-------------- generate config
-
- cat > $root/config.json <<EOF
- {
-   "port":$port,
-   "project":"$project_name",
-   "name_service":"$name_service"
- }
-EOF
-
-chmod 744 $root/config.json
 
 #-------------- end
 
