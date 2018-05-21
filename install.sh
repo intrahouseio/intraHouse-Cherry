@@ -63,15 +63,15 @@ chmod 744 $root/config.json
 function getLinuxUrl {
   check=$(apt-get 2> /dev/null || echo "false" )
   if [[ $check != "false" ]]; then
-      url="https://raw.githubusercontent.com/intrahouseio/Doc/master/install_linux_deb.sh"
+      url="https://raw.githubusercontent.com/intrahouseio/intraHouse-Cherry/master/install_linux_deb.sh"
   else
-      url="https://raw.githubusercontent.com/intrahouseio/Doc/master/install_linux_red.sh"
+      url="https://raw.githubusercontent.com/intrahouseio/intraHouse-Cherry/master/install_linux_red.sh"
   fi
 }
 
 case "$OSTYPE" in
   solaris*) echo -e "\033[0;33m Error:\033[0;31m Installation is not supported\033[0;35m $OSTYPE!" && exit ;; #SOLARIS
-  darwin*)  url="https://raw.githubusercontent.com/intrahouseio/Doc/master/install_darwin.sh" ;; #OSX
+  darwin*)  url="https://raw.githubusercontent.com/intrahouseio/intraHouse-Cherry/master/install_darwin.sh" ;; #OSX
   linux*)   getLinuxUrl ;; #LINUX
   bsd*)     echo -e "\033[0;33m Error:\033[0;31m Installation is not supported\033[0;35m $OSTYPE!" && exit ;; #BSD
   msys*)    echo -e "\033[0;33m Error:\033[0;31m Installation is not supported\033[0;35m $OSTYPE!" && exit ;; #WINDOWS
