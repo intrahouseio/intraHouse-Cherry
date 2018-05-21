@@ -13,7 +13,7 @@ fi
 
 repo_name="intraHouse-Cherry"
 name_service="intrahouse-c"
-project_name="project1"
+project_name=project_$(date +%s)
 port=8088
 
 root=/opt/$name_service
