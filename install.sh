@@ -19,6 +19,12 @@ port=8088
 root=/opt/$name_service
 project_path=/var/lib/$name_service/projects/$project_name
 
+case "$1" in
+  "ru")   lang=$1;;
+  "en")   lang=$1;;
+     *)   lang="en";;
+esac
+
 #-------------- end
 
 #-------------- logo
