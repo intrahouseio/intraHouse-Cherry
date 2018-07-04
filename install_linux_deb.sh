@@ -296,7 +296,7 @@ if [[ $type_service == "systemd" ]]; then
   WorkingDirectory=/opt/$name_service
   ExecStart=/opt/$name_service/node/bin/node /opt/$name_service/backend/app.js prod
   Restart=always
-   RestartSec=5
+  RestartSec=5
   StandardOutput=syslog
   StandardError=syslog
   SyslogIdentifier=$name_service
