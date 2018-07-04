@@ -6,7 +6,7 @@
 const darkness = Device("SensorD"); 
 
 const script = {
-    check() {
+    boot() {
       return true;
     },
     
