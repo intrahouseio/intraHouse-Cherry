@@ -288,7 +288,9 @@ if [[ $type_service == "systemd" ]]; then
   touch $path_service
 
   cat > $path_service <<EOF
-  description=$name_service
+  [Unit]
+  Description=$name_service
+  After=network.target mysql.service
 
   [Service]
   WorkingDirectory=/opt/$name_service
@@ -300,7 +302,7 @@ if [[ $type_service == "systemd" ]]; then
   SyslogIdentifier=$name_service
 
   [Install]
-  WantedBy=multi-user.target
+  WantedBy=multi-user.target mysql.service
 EOF
   export SYSTEMD_PAGER=''
   chmod 755 $path_service
