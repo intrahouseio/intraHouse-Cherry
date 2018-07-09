@@ -1,10 +1,11 @@
 ### intraHouse-Cherry - Unreleased
+*
 
 ### intraHouse-Cherry - v4.2.0 (09.07.18)
 * Добавлен механизм АВТО-РЕАВТО (команды aon/aoff, сброс и восстановление авто при ручном переключении - как в Berry)
 * Добавлен отладчик в разделе Рабочие сценарии (для одного экземпляра сценария)
 
-### Plugin Xiaomi MiHome - v0.0.17 (26.07.18)
+### Plugin Xiaomi MiHome - v0.0.17 (06.07.18)
 * fix bug multiple gateways
 
 ### intraHouse-Cherry - v4.1.28 (14.06.18)
