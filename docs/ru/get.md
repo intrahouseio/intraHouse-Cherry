@@ -1,7 +1,7 @@
 
 ## Mac OS
 
-`curl -sl https://git.io/fN1JN | sudo -E bash -s ru`
+`curl -sL https://git.io/fN1JN | sudo -E bash -s ru`
 
 ###### Supported versions:
 * **Old versions** (not tested)
@@ -12,7 +12,7 @@
 
 ## Debian and Ubuntu
 
-`curl -sl https://git.io/fN1JN | sudo -E bash -s ru`
+`curl -sL https://git.io/fN1JN | sudo -E bash -s ru`
 
 ###### Available architectures:
 
@@ -35,7 +35,7 @@
 
 ## Red Hat and CentOS.
 
-`curl -sl https://git.io/fN1JN | sudo -E bash -s ru`
+`curl -sL https://git.io/fN1JN | sudo -E bash -s ru`
 
 ###### Available architectures:
 
