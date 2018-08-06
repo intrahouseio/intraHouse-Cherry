@@ -21,7 +21,8 @@ cd $root
  {
    "port":$port,
    "project":"$project_name",
-   "name_service":"$name_service"
+   "name_service":"$name_service",
+   "lang":"$lang"
  }
 EOF
 
@@ -67,11 +68,11 @@ echo -e "\033[0m"
 
 unzip ./intrahouse-lite.zip > /dev/null
 
-if [ -d "./project" ]; then
+if [ -d "./project_$lang" ]; then
   rm -fr $project_path
   mkdir -p $project_path
-  cp -fr ./project/* $project_path
-  rm -fr ./project
+  cp -fr ./project_$lang/* $project_path
+  rm -fr ./project_*
 fi
 
 mkdir -p node
