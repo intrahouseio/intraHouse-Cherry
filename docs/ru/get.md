@@ -54,6 +54,7 @@
 
 
 ## Windows
+cmd:
 
 `powershell -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/fNdFt'))"`
 
