@@ -29,7 +29,7 @@ $currentUser = New-Object Security.Principal.WindowsPrincipal $([Security.Princi
 $testadmin = $currentUser.IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)
 if ($testadmin -eq $false) {
 [IO.File]::WriteAllLines("$root\install.ps1", (New-Object System.Net.WebClient).DownloadString('https://git.io/fNdFt'))
-$arg="-NoProfile -InputFormat None -ExecutionPolicy Bypass -NoExit -file $root\install.ps1"
+$arg="-NoProfile -InputFormat None -ExecutionPolicy Bypass -NoExit -file $root\install.ps1 $l"
 Start-Process powershell.exe -Verb RunAs -ArgumentList($arg)
 exit $LASTEXITCODE
 }
