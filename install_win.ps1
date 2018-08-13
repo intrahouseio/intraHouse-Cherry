@@ -3,13 +3,6 @@ Clear-Host
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-$currentUser = New-Object Security.Principal.WindowsPrincipal $([Security.Principal.WindowsIdentity]::GetCurrent())
-$testadmin = $currentUser.IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)
-if ($testadmin -eq $false) {
-Start-Process powershell.exe -Verb RunAs -ArgumentList ('-NoProfile -InputFormat None -ExecutionPolicy Bypass -NoExit  -file "{0}" -elevated' -f ($myinvocation.MyCommand.Definition))
-exit $LASTEXITCODE
-}
-
 #-------------- options
 $repo_name="intraHouse-Cherry"
 $name_service="intrahouse-c"
@@ -30,7 +23,20 @@ $lang = switch ( $l )
 #-------------- end
 
 
-#-------------- check
+#-------------- check root
+
+$currentUser = New-Object Security.Principal.WindowsPrincipal $([Security.Principal.WindowsIdentity]::GetCurrent())
+$testadmin = $currentUser.IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)
+if ($testadmin -eq $false) {
+[IO.File]::WriteAllLines("$root\install.ps1", (New-Object System.Net.WebClient).DownloadString('https://git.io/fNdFt'))
+$arg="-NoProfile -InputFormat None -ExecutionPolicy Bypass -NoExit -file $root\install.ps1"
+Start-Process powershell.exe -Verb RunAs -ArgumentList($arg)
+exit $LASTEXITCODE
+}
+#-------------- end
+
+
+#-------------- check service
 
 if (Get-Service -Name "$name_service" -ErrorAction SilentlyContinue) {
 cmd /c "SC STOP intrahousec.exe" | Out-Null
@@ -138,6 +144,7 @@ Remove-Item -Force -Recurse -ErrorAction SilentlyContinue "$root\node.zip"
 Remove-Item -Force -Recurse -ErrorAction SilentlyContinue "$root\intrahouse-lite.zip"
 Remove-Item -Force -Recurse -ErrorAction SilentlyContinue "$root\rsync.zip"
 Remove-Item -Force -Recurse -ErrorAction SilentlyContinue "$root\project_*"
+Remove-Item -Force -Recurse -ErrorAction SilentlyContinue "$root\install.ps1"
 
 
 #-------------- end
