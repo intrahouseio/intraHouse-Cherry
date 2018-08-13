@@ -59,4 +59,4 @@
 
 ###### Supported versions:
 * **Old versions** (not tested)
-* **Windows 10** (10.10)
+* **Windows 10** (32-bit and 64-bit)
