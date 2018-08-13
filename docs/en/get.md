@@ -51,3 +51,11 @@
 
 * **CentOS 6** (32-bit and 64-bit)
 * **CentOS 7** (64-bit)
+
+
+## Windows
+cmd: `powershell -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/fNdFt'))"`
+
+###### Supported versions:
+* **Old versions** (not tested)
+* **Windows 10** (32-bit and 64-bit)
