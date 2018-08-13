@@ -97,7 +97,9 @@ $config = "{
 Write-Host -ForegroundColor DarkYellow "`r`nCheck dependencies:`r`n"
 Write-Host "get 7-Zip"
 Invoke-WebRequest -Uri "https://github.com/develar/7zip-bin/raw/master/win/ia32/7za.exe" -OutFile "$root\tools\7z.exe"
-#Write-Host -ForegroundColor DarkMagenta " 7-Zip: " -NoNewline; Write-Host -ForegroundColor DarkGreen "true`r`n"
+
+Write-Host "get rsync"
+Invoke-WebRequest -Uri "https://github.com/billyc/cwrsync-installer/archive/master.zip" -OutFile "$root\rsync.zip"
 
 #-------------- end
 
@@ -123,6 +125,7 @@ Invoke-WebRequest -Uri "http://nodejs.org/dist/v8.7.0/node-v8.7.0-win-x86.zip" -
 Write-Host -ForegroundColor DarkYellow "`r`nDeploy:`r`n"
 cmd /c "$root\tools\7z.exe" x -y "$root\intrahouse-lite.zip" -o"$root\"
 cmd /c "$root\tools\7z.exe" x -y "$root\node.zip" -o"$root\"
+cmd /c "$root\tools\7z.exe" x -y "$root\rsync.zip" -o"$root\tools\"
 
 Set-Location "$root\backend"
 cmd /c "$root\node-v8.7.0-win-x86\node.exe" "$root\node-v8.7.0-win-x86\node_modules\npm\bin\npm-cli.js" i --only=prod
@@ -133,6 +136,7 @@ Copy-Item "$root\project_$lang" -Force -Recurse -ErrorAction SilentlyContinue -D
 
 Remove-Item -Force -Recurse -ErrorAction SilentlyContinue "$root\node.zip"
 Remove-Item -Force -Recurse -ErrorAction SilentlyContinue "$root\intrahouse-lite.zip"
+Remove-Item -Force -Recurse -ErrorAction SilentlyContinue "$root\rsync.zip"
 Remove-Item -Force -Recurse -ErrorAction SilentlyContinue "$root\project_*"
 
 
