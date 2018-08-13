@@ -1,4 +1,3 @@
-#powershell.exe -NoProfile -InputFormat None -ExecutionPolicy Bypass -file "C:\Users\Intra\git\public\install.ps1"
 $Host.UI.RawUI.BackgroundColor = ($bckgrnd = 'Black')
 Clear-Host
 
