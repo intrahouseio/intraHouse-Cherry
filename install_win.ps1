@@ -19,7 +19,13 @@ $port=8088
 $root="$($env:LOCALAPPDATA)\$($name_service)"
 $project_path="C:\ProgramData\$($name_service)\projects\$($project_name)"
 
-$lang="en"
+
+$lang = switch ( $day )
+    {
+        ru { 'ru' }
+        en { 'en' }
+        default { 'en' }
+    }
 
 #-------------- end
 
