@@ -1,3 +1,4 @@
+powershell -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('http://127.0.0.1/install.ps1'))"
 
 ## Mac OS
 
