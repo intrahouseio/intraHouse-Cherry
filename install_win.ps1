@@ -20,7 +20,7 @@ $root="$($env:LOCALAPPDATA)\$($name_service)"
 $project_path="C:\ProgramData\$($name_service)\projects\$($project_name)"
 
 
-$lang = switch ( $day )
+$lang = switch ( $l )
     {
         ru { 'ru' }
         en { 'en' }
