@@ -46,6 +46,11 @@ exit $LASTEXITCODE
 
 #-------------- check service
 
+if (Get-NetFirewallRule -DisplayName intrahouse-c -ErrorAction SilentlyContinue) {
+} else {
+New-NetFirewallRule -DisplayName "$name_service" -Direction Inbound -Program "$root\node-v8.7.0-win-x86\node.exe" -RemoteAddress ANY -Action Allow | Out-Null
+}
+
 if (Get-Service -Name "$name_service" -ErrorAction SilentlyContinue) {
 cmd /c "SC STOP intrahousec.exe" | Out-Null
 }
@@ -187,6 +192,7 @@ cmd /c "$root\node-v8.7.0-win-x86\node.exe" "$root\service.js"
 }
 
 cmd /c sc query intrahousec.exe
+
 #-------------- end
 
 
