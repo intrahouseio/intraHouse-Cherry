@@ -103,11 +103,16 @@ $config = "{
   `"port`":$port,
   `"project`":`"$project_name`",
   `"name_service`":`"$name_service`",
-  `"vardir`":`"C:`/ProgramData`/`",
+  `"vardir`":`"C:`\ProgramData`\`",
+  `"node`":`"$root`\node-v8.7.0-win-x86`\node.exe`",
+  `"npm`":`"$root`\node-v8.7.0-win-x86`\node.exe $root`\node-v8.7.0-win-x86`\node_modules`\npm`\bin`\npm-cli.js`",
+  `"rsync`":`"$root`\tools`\cwrsync`\rsync.exe`",
+  `"zip`":`"$root`\tools`\7z.exe`",
+  `"unzip`":`"$root`\tools`\7z.exe`",
   `"lang`":`"$lang`"
 }
 "
-[IO.File]::WriteAllLines("$($root)/config.json", $config)
+[IO.File]::WriteAllLines("$($root)/config.json", $config.replace("\","\\"))
 
 #-------------- end
 
