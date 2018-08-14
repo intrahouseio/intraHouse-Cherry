@@ -12,8 +12,8 @@ $port=8088
 $root="$($env:LOCALAPPDATA)\$($name_service)"
 $project_path="C:\ProgramData\$($name_service)\projects\$($project_name)"
 
-if ( $args[0] ) {
-$lang = switch ( $args[0] )
+if ( $args ) {
+$lang = switch ( $args )
     {
         ru { 'ru' }
         en { 'en' }
