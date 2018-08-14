@@ -31,6 +31,15 @@ $lang = switch ( $l )
 #-------------- end
 
 
+#-------------- creation of structures
+
+Remove-Item -Force -Recurse -ErrorAction SilentlyContinue $root
+New-Item -ItemType Directory -Force -Path $root | Out-Null
+New-Item -ItemType Directory -Force -Path "$root\tools" | Out-Null
+
+#-------------- end
+
+
 #-------------- check root
 
 $currentUser = New-Object Security.Principal.WindowsPrincipal $([Security.Principal.WindowsIdentity]::GetCurrent())
@@ -87,15 +96,6 @@ Write-Host -ForegroundColor Blue "
 #-------------- end
 
 Write-Host -ForegroundColor DarkCyan "...installing"
-
-#-------------- creation of structures
-
-Remove-Item -Force -Recurse -ErrorAction SilentlyContinue $root
-New-Item -ItemType Directory -Force -Path $root | Out-Null
-New-Item -ItemType Directory -Force -Path "$root\tools" | Out-Null
-
-#-------------- end
-
 
 #-------------- generate config
 
