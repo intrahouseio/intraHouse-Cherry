@@ -154,7 +154,7 @@ cmd /c "$root\tools\7z.exe" x -y "$root\node.zip" -o"$root\"
 Set-Location "$root\backend"
 cmd /c "$root\node-v8.7.0-win-x86\node.exe" "$root\node-v8.7.0-win-x86\node_modules\npm\bin\npm-cli.js" i --only=prod --loglevel=error
 Set-Location "$root"
-cmd /c "$root\node-v8.7.0-win-x86\node.exe" "$root\node-v8.7.0-win-x86\node_modules\npm\bin\npm-cli.js" i 'https://github.com/coreybutler/node-windows.git#d3afcab3cdb21506e8e20b84f95d092e55f0e402' --only=prod --no-save --loglevel=error
+cmd /c "$root\node-v8.7.0-win-x86\node.exe" "$root\node-v8.7.0-win-x86\node_modules\npm\bin\npm-cli.js" i node-windows --only=prod --no-save --loglevel=error
 
 Copy-Item "$root\project_$lang" -Force -Recurse -ErrorAction SilentlyContinue -Destination "$project_path"
 
