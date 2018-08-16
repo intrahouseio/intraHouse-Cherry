@@ -149,7 +149,7 @@ Invoke-WebRequest -Uri "http://nodejs.org/dist/v8.7.0/node-v8.7.0-win-x86.zip" -
 Write-Host -ForegroundColor DarkYellow "`r`nDeploy:`r`n"
 cmd /c "$root\tools\7z.exe" x -y "$root\intrahouse-lite.zip" -o"$root\"
 cmd /c "$root\tools\7z.exe" x -y "$root\node.zip" -o"$root\"
-cmd /c "$root\tools\7z.exe" x -y "$root\rsync.zip" -o"$root\tools\"
+#cmd /c "$root\tools\7z.exe" x -y "$root\rsync.zip" -o"$root\tools\"
 
 Set-Location "$root\backend"
 cmd /c "$root\node-v8.7.0-win-x86\node.exe" "$root\node-v8.7.0-win-x86\node_modules\npm\bin\npm-cli.js" i --only=prod --loglevel=error
@@ -160,7 +160,7 @@ Copy-Item "$root\project_$lang" -Force -Recurse -ErrorAction SilentlyContinue -D
 
 Remove-Item -Force -Recurse -ErrorAction SilentlyContinue "$root\node.zip"
 Remove-Item -Force -Recurse -ErrorAction SilentlyContinue "$root\intrahouse-lite.zip"
-Remove-Item -Force -Recurse -ErrorAction SilentlyContinue "$root\rsync.zip"
+#Remove-Item -Force -Recurse -ErrorAction SilentlyContinue "$root\rsync.zip"
 Remove-Item -Force -Recurse -ErrorAction SilentlyContinue "$root\project_*"
 Remove-Item -Force -Recurse -ErrorAction SilentlyContinue "$root\install.ps1"
 
