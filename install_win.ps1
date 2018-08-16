@@ -106,7 +106,7 @@ $config = "{
   `"vardir`":`"C:`\ProgramData`\`",
   `"node`":`"$root`\node-v8.7.0-win-x86`\node.exe`",
   `"npm`":`"$root`\node-v8.7.0-win-x86`\node.exe $root`\node-v8.7.0-win-x86`\node_modules`\npm`\bin`\npm-cli.js`",
-  `"rsync`":`"$root`\tools`\cwrsync`\rsync.exe`",
+#  `"rsync`":`"$root`\tools`\cwrsync`\rsync.exe`",
   `"zip`":`"$root`\tools`\7z.exe`",
   `"unzip`":`"$root`\tools`\7z.exe`",
   `"lang`":`"$lang`"
@@ -122,8 +122,8 @@ Write-Host -ForegroundColor DarkYellow "`r`nCheck dependencies:`r`n"
 Write-Host "get 7-Zip"
 Invoke-WebRequest -Uri "https://github.com/develar/7zip-bin/raw/master/win/ia32/7za.exe" -OutFile "$root\tools\7z.exe"
 
-Write-Host "get rsync"
-Invoke-WebRequest -Uri "https://github.com/billyc/cwrsync-installer/archive/master.zip" -OutFile "$root\rsync.zip"
+#Write-Host "get rsync"
+#Invoke-WebRequest -Uri "https://github.com/billyc/cwrsync-installer/archive/master.zip" -OutFile "$root\rsync.zip"
 
 #-------------- end
 
@@ -196,6 +196,7 @@ cmd /c "$root\node-v8.7.0-win-x86\node.exe" "$root\service.js"
 cmd /c "$root\node-v8.7.0-win-x86\node.exe" "$root\service.js"
 }
 Sleep 3
+cmd /c sc start intrahousec.exe | Out-Null
 cmd /c sc query intrahousec.exe
 
 #-------------- end
