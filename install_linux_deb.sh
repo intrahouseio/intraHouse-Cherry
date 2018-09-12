@@ -157,11 +157,11 @@ echo ""
 distro=$(lsb_release -c -s 2> /dev/null) || distro=$(cat /etc/os-release | grep -oP "VERSION=\".*\(\K(.*)\)") && distro=${distro%?}
 
 case "$distro" in
-  xenial*)  type_service="systemd" ;; # ubuntu 16
-  trusty*)  type_service="upstart" ;; # ubuntu 14
-  precise*) type_service="upstart" ;; # ubuntu 12
-  jessie*)  type_service="systemd" ;; # debian 8
-  wheezy*)  type_service="sysv" ;; # debian 7
+  xenia*)  type_service="systemd" ;; # ubuntu 16
+  trust*)  type_service="upstart" ;; # ubuntu 14
+  precis*) type_service="upstart" ;; # ubuntu 12
+  jessi*)  type_service="systemd" ;; # debian 8
+  wheez*)  type_service="sysv" ;; # debian 7
   *)        type_service="systemd" ;;
 esac
 
