@@ -9,8 +9,8 @@
 * Обновлено отображение журнала в параметрах устройства (долгое нажатие по утсройству)
 
 ### Plugin CCTV - v0.0.11 (17.09.18)
-* fix udp
-* fix rtsp
+* improved support for udp
+* improved support for rtsp
 
 ### Plugin Xiaomi - v0.0.22 (14.09.18)
 * add Plug Base `ctrl_86plug.aq1`
