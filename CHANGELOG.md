@@ -11,7 +11,7 @@
 ### Plugin Xiaomi - v0.0.22 (14.09.18)
 * add Plug Base `ctrl_86plug.aq1`
 * add Duplex Button `86sw2`
-* add Duplex Switch LN `ctrl_ln2.aq1
+* add Duplex Switch LN `ctrl_ln2.aq1`
 * fix gateway herabit
 
 ### intraHouse-Cherry - v4.3.5 (22.08.18)
