@@ -8,6 +8,12 @@
 * Обновлено поле выбора устройств
 * Обновлено отображение журнала в параметрах устройства (долгое нажатие по утсройству)
 
+### Plugin Xiaomi - v0.0.22 (14.09.18)
+* add Plug Base `ctrl_86plug.aq1`
+* add Duplex Button `86sw2`
+* add Duplex Switch LN `ctrl_ln2.aq1
+* fix gateway herabit
+
 ### intraHouse-Cherry - v4.3.5 (22.08.18)
 * Поддержка Windows (pro & scada)
 * Добавлено столбчатое отображение для виджета "График"
@@ -38,7 +44,7 @@
 * Исправлена логика виджета `CCTV`, добавлена возможность переключения через виджет `Навигатор`
 * Исправлена ошибка при привязке устройства к каналу
 
-### Plugin Xiaomi MiHome - v0.0.19 (24.07.18)
+### Plugin Xiaomi - v0.0.19 (24.07.18)
 * Sounds control panel
 
 ### intraHouse-Cherry - v4.2.0 (16.07.18)
@@ -58,7 +64,7 @@
 ### Plugin MegaD- v1.1.5 (07.07.18)
 * В расширении добавлена возможность в ответ на входящий запрос отправлять запрос (возможно, на другой контроллер)
 
-### Plugin Xiaomi MiHome - v0.0.17 (06.07.18)
+### Plugin Xiaomi - v0.0.17 (06.07.18)
 * fix bug multiple gateways
 
 ### intraHouse-Cherry - v4.1.28 (14.06.18)
@@ -98,7 +104,7 @@
 ### Plugin Ping - v0.0.1 (11.05.18)
 * Новый плагин
 
-### Plugin Xiaomi MiHome - v0.0.15 (24.04.18)
+### Plugin Xiaomi - v0.0.15 (24.04.18)
 * add multiple gateways
 * plugin commands: add/remove device
 
@@ -106,11 +112,11 @@
 * add Magic Cube `cube`
 * add Flood Sensor `sensor_wleak.aq1`
 
-### Plugin Xiaomi MiHome - v0.0.12 (29.03.18)
+### Plugin Xiaomi - v0.0.12 (29.03.18)
 * add Wall Switch `ctrl_neutral1`
 * add Wall Switch `ctrl_neutral2`
 
-### Plugin Xiaomi MiHome - v0.0.11 (26.03.18)
+### Plugin Xiaomi - v0.0.11 (26.03.18)
 * add Neutral Wall Switch `ctrl_ln1.aq1`
 
 ### intraHouse-Cherry - v4.1.25 (14.03.18)
