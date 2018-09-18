@@ -1,4 +1,5 @@
 ### intraHouse-Cherry - Unreleased
+* Changes that have landed in master but are not yet released.
 
 ### intraHouse-Cherry - v4.3.6 (18.09.18)
 * Виджет `CCTV` добавлена обработка ошибки при потери связи
