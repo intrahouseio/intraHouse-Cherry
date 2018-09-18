@@ -18,7 +18,8 @@
 * fix gateway herabit
 
 ### Plugin Telegram - v0.0.3 (11.09.18)
-* add proxy
+* add proxy `auto` (search and use public list proxy)
+* add proxy `manual` (HTTP/HTTPS)
 
 ### intraHouse-Cherry - v4.3.5 (22.08.18)
 * Поддержка Windows (pro & scada)
