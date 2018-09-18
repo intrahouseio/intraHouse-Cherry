@@ -17,6 +17,9 @@
 * add Duplex Switch LN `ctrl_ln2.aq1`
 * fix gateway herabit
 
+### Plugin telegram - v0.0.3 (11.09.18)
+* add proxy
+
 ### intraHouse-Cherry - v4.3.5 (22.08.18)
 * Поддержка Windows (pro & scada)
 * Добавлено столбчатое отображение для виджета "График"
