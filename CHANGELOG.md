@@ -1,5 +1,6 @@
 ### [Unreleased]
-* Добавлена поддержка старых устройств `Ipad/Iphone`
+* Добавлена поддержка `Microsoft EDGE`
+* Добавлена поддержка `Safari` на старых устройствах `Ipad/Iphone`
 * Авторизация через `query` параметры `username`, `password`, `key`
 
 ### intraHouse-Cherry - v4.3.6 (18.09.18)
