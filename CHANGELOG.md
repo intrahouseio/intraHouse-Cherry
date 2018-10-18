@@ -1,3 +1,6 @@
+### ntraHouse-Cherry - v4.3.9 (18.10.18)
+* Исправлена поддрежка javascript в виджите `HTML`
+
 ### ntraHouse-Cherry - v4.3.7 (25.09.18)
 * Добавлена поддержка `Microsoft EDGE`
 * Добавлена поддержка `Safari` на старых устройствах `Ipad/Iphone`
