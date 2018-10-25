@@ -105,13 +105,14 @@ cat > $path_service <<EOF
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
   <key>Label</key>
-    <string>$name_service</string>
-
+  <string>$name_service</string>
   <key>WorkingDirectory</key>
-    <string>/opt/$name_service</string>
-
+  <string>/opt/$name_service</string>
   <key>ProgramArguments</key>
   <array>
     <string>/opt/$name_service/node/bin/node</string>
@@ -119,19 +120,11 @@ cat > $path_service <<EOF
     <string>prod</string>
   </array>
 
-  <key>RunAtLoad</key>
-    <true/>
-
-  <key>KeepAlive</key>
-    <true/>
-
   <key>StandardOutPath</key>
-    <string>/opt/$name_service/launchdOutput.log</string>
+  <string>/opt/$name_service/launchdOutput.log</string>
 
   <key>StandardErrorPath</key>
-    <string>/opt/$name_service/launchdErrors.log</string>
-
-
+  <string>/opt/$name_service/launchdErrors.log</string>
 </dict>
 </plist>
 EOF
