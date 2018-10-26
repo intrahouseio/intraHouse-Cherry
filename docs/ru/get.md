@@ -11,7 +11,6 @@
 * **High Sierra** (10.13)
 * **Mojave** (10.14)
 
-
 ## Debian and Ubuntu
 
 `curl -sL https://git.io/fN1JN | sudo -E bash -s ru`
