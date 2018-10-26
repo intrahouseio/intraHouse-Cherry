@@ -96,7 +96,7 @@ echo -e "\033[0;36m"
 echo -e "...register service \033[0m"
 echo ""
 
-path_service=/Library/LaunchAgents/$name_service.plist
+path_service=/Library/LaunchDaemons/$name_service.plist
 
 sudo rm -frd $path_service
 
@@ -134,9 +134,9 @@ EOF
 sudo launchctl stop $name_service
 sudo launchctl remove $name_service
 
-sudo chown root /Library/LaunchAgents/$name_service.plist
-sudo chmod 644 /Library/LaunchAgents/$name_service.plist
-sudo launchctl load /Library/LaunchAgents/$name_service.plist
+sudo chown root /Library/LaunchDaemons/$name_service.plist
+sudo chmod 644 /Library/LaunchDaemons/$name_service.plist
+sudo launchctl load /Library/LaunchDaemons/$name_service.plist
 
 sudo launchctl start $name_service
 
