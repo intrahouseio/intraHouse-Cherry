@@ -135,7 +135,7 @@ sudo launchctl stop $name_service
 sudo launchctl remove $name_service
 
 sudo chown root /Library/LaunchAgents/$name_service.plist
-sudo chmod 755 /Library/LaunchAgents/$name_service.plist
+sudo chmod 644 /Library/LaunchAgents/$name_service.plist
 sudo launchctl load /Library/LaunchAgents/$name_service.plist
 
 sudo launchctl start $name_service
