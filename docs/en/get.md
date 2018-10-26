@@ -8,7 +8,8 @@
 * **Yosemite** (10.10)
 * **El Capitan** (10.11)
 * **Sierra** (10.12)
-
+* **High Sierra** (10.13)
+* **Mojave** (10.14)
 
 ## Debian and Ubuntu
 
@@ -25,6 +26,7 @@
 * **Ubuntu 12.04 LTS** (Precise Pangolin)
 * **Ubuntu 14.04 LTS** (Trusty Tahr)
 * **Ubuntu 16.04 LTS** (Xenial Xerus)
+* **Ubuntu 18.04 LTS** (Bionic Beaver)
 
 ###### Supported Debian versions:
 
@@ -58,4 +60,4 @@ cmd: `powershell -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "
 
 ###### Supported versions:
 * **Old versions** (not tested)
-* **Windows 10** (32-bit and 64-bit)
+* **Windows 10** (64-bit)
