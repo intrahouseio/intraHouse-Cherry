@@ -30,9 +30,9 @@
 
 ###### Supported Debian versions:
 
-* **Debian 7** (wheezy)
-* **Debian 8** (jessie)
-* **Debian 9** (stretch)
+* **Debian 7** (Wheezy)
+* **Debian 8** (Jessie)
+* **Debian 9** (Stretch)
 
 
 ## Red Hat and CentOS.
