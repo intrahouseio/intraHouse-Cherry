@@ -1,12 +1,12 @@
 
 ### intraHouse-Cherry - Unreleased
- * Добавлена возможность выводить имя пользователя в UI [#88](https://github.com/intrahouseio/intraHouse-Cherry/issues/88) 
-   - Виджет Системная информация - User name
+ * Добавлена возможность выводить имя пользователя в UI 
+   - [#88](https://github.com/intrahouseio/intraHouse-Cherry/issues/88) Виджет Системная информация - User name
  * Доработаны механизмы разделения доступа пользователей:
-   - добавлен режим разработчика
-   - добавлен список ролей
-   - добавлена возможность определить для пользователя список объектов
-   
+   - [#93](https://github.com/intrahouseio/intraHouse-Cherry/issues/93) добавлены режим разработчика и список ролей
+   - [#128](https://github.com/intrahouseio/intraHouse-Cherry/issues/128) добавлена возможность определить для пользователя список объектов
+ * Добавлена возможность сортировки в наборе графиков для упорядочивания легенд
+   - [#113](https://github.com/intrahouseio/intraHouse-Cherry/issues/128) используется свойство `№ пп` (order)
 
 ### intraHouse-Cherry - v4.3.10 (19.10.18)
 * Добавлена возможность использовать Список мнемосхем в Навигаторе 
