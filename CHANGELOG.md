@@ -10,6 +10,7 @@
    - [#113](https://github.com/intrahouseio/intraHouse-Cherry/issues/128) используется свойство `№ пп` (order)
  * Добавлен новый журнал - подключения пользователей
    - [#130](https://github.com/intrahouseio/intraHouse-Cherry/issues/130) Журнал авторизации в списке журналов
+ * Добавлена возможность отключать родительские стили у виджета `HTML` 
    
 
 ### intraHouse-Cherry - v4.3.10 (19.10.18)
