@@ -26,10 +26,10 @@
 
 ## Support, feedback, news
 
-Stay in touch with us via form [issues](https://github.com/intrahouseio/Doc/issues) or email support@intrahouse.eu.
+Stay in touch with us via form [issues](https://github.com/intrahouseio/Doc/issues) or email support@ih-systems.com
 
-If you found a bug in [IntraHouse](http://www.intrahouse.eu/en/) system or
-[plugins](http://www.intrahouse.eu/en/plugins/), please look at
+If you found a bug in [IntraHouse](https://www.ih-systems.com/en/) system or
+[plugins](https://ih-systems.com/en/product-category/plugins/), please look at
 [issues](https://github.com/intrahouseio/Doc/issues). We probably know and are fixing it already. If we don't, it's better to report the bug there. There you can also leave your wishes and suggestions.
 
 You can follow the news by
