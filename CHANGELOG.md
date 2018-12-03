@@ -1,6 +1,10 @@
 
 ### intraHouse-Cherry - Unreleased
 
+### intraHouse-Cherry - v4.4.4  (03.12.18)
+  * Исправлено отображение журнала устройств
+  * Исправлен скролинг формы авторизации
+
 ### intraHouse-Cherry - v4.4.3  (16.11.18)
  * Исправлена ошибка
    - [#91](https://github.com/intrahouseio/intraHouse-Cherry/issues/91) Инверсия актуаторов не работает
