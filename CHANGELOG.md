@@ -1,5 +1,7 @@
 
 ### intraHouse-Cherry - Unreleased
+
+### intraHouse-Cherry - v4.4.3  (16.11.18)
  * Исправлена ошибка
    - [#91](https://github.com/intrahouseio/intraHouse-Cherry/issues/91) Инверсия актуаторов не работает
  * Доработаны стратегии сохранения данных в БД
