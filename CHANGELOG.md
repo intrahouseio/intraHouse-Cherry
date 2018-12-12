@@ -2,7 +2,7 @@
 ### intraHouse-Cherry - Unreleased
 
 ### intraHouse-Cherry - v4.4.5  (12.12.18)
- * [Новое API сценариев] (https://ih-systems.com/ru/command_list/)
+ * Новое API сценариев https://ih-systems.com/ru/command_list/
    (предыдущее API также остается работоспособным ) 
  * При изменении языка происходит перезагрузка сервера
  * Добавлена возможность изменять заголовок вкладки и при в окне авторизации
