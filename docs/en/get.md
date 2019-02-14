@@ -55,6 +55,12 @@
 * **CentOS 7** (64-bit)
 
 
+## Android (Termux)
+
+`pkg install wget -y`  
+`wget -q -O - https://git.io/fh70H | bash`
+
+
 ## Windows
 cmd: `powershell -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/fNdFt'))"`
 
