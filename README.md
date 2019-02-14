@@ -34,13 +34,10 @@
 ## Поддержка, обратная связь, новости
 
 Общайтесь с нами через форму [issues](https://github.com/intrahouseio/Doc/issues) или
-через почту support@intrahouse.eu.
+через почту support@ih-systems.com
 
-Если вы нашли баг в работе системе [IntraHouse](http://www.intrahouse.eu/ru/) или
-[плагинах](https://intrahouse.ru/product-category/plugins_ru/), загляните в
-[issues](https://github.com/intrahouseio/Doc/issues), возможно, про него мы уже знаем и
-работаем над этим. Если нет, лучше всего сообщить о нём там. Там же вы можете оставлять свои
-пожелания и предложения.
+Если вы нашли баг в работе системе [intraHouse](https://www.ih-systems.com) или [плагинах](https://ih-systems.com/ru/product-category/plugins/), загляните в [issues](https://github.com/intrahouseio/Doc/issues), возможно, про него мы уже знаем и
+работаем над этим. Если нет, лучше всего сообщить о нём там. Там же вы можете оставлять свои пожелания и предложения.
 
 За новостями вы можете следить по
 [релизам](https://github.com/intrahouseio/Doc/releases) или
