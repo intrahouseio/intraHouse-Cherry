@@ -25,7 +25,7 @@ case "$1" in
   "en")   lang=$1;;
      *)   lang="en";;
 esac
-echo $lang
+
 #-------------- end
 
 #-------------- creation of structures
@@ -106,7 +106,7 @@ chmod 744 $core/config.json
 echo -e "\033[0;36m"
 echo -e "...register service \033[0m"
 echo ""
-pm2 stop intrahouse-c > /dev/null
+
 pm2 start ./backend/app.js -- prod --name "intrahouse-c"
 
 cat > ~/.bashrc <<EOF
