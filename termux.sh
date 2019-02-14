@@ -25,7 +25,7 @@ case "$1" in
   "en")   lang=$1;;
      *)   lang="en";;
 esac
-
+echo $lang
 #-------------- end
 
 #-------------- creation of structures
