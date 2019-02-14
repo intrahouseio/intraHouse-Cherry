@@ -14,7 +14,7 @@ project_name=project_$(date +%s)
 port=8088
 
 root="$(pwd)/$name_service"
-core="$(pwd)/$name_service/core"
+core="$(pwd)/$name_service/intrahouse-c"
 project="$root/varlib/"
 project_path="$root/varlib/$name_service/projects/$project_name"
 
@@ -110,7 +110,7 @@ echo ""
 pm2 start ./backend/app.js -- prod --name "intrahouse-c"
 
 cat > ~/.bashrc <<EOF
-cd ./intrahouse-c/core/ && pm2 start ./backend/app.js -- prod --name "intrahouse-c"
+cd ./intrahouse-c/intrahouse-c/ && pm2 start ./backend/app.js -- prod --name "intrahouse-c"
 EOF
 
 #-------------- end
