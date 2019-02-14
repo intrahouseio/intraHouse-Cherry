@@ -107,10 +107,10 @@ echo -e "\033[0;36m"
 echo -e "...register service \033[0m"
 echo ""
 
-pm2 start ./backend/app.js -- prod --name "intrahouse-c"
+pm2 start ./backend/app.js -- prod
 
 cat > ~/.bashrc <<EOF
-cd ./intrahouse-c/intrahouse-c/ && pm2 start ./backend/app.js -- prod --name "intrahouse-c"
+cd ./intrahouse-c/intrahouse-c/ && pm2 start ./backend/app.js -- prod
 EOF
 
 #-------------- end
