@@ -54,7 +54,11 @@
 * **CentOS 6** (32-bit and 64-bit)
 * **CentOS 7** (64-bit)
 
+## Wiren Board
 
+`curl -sL https://git.io/JeMEz| sudo -E bash -s ru` 
+  
+  
 ## Android (Termux)
 
 `pkg install wget -y`  

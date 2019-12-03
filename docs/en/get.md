@@ -60,7 +60,11 @@
 `pkg install wget -y`  
 `wget -q -O - https://git.io/fh70H | bash`
 
+## Wiren Board
 
+`curl -sL https://git.io/JeMEz| sudo -E bash -s ru` 
+  
+  
 ## Windows
 cmd: `powershell -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/fNdFt'))"`
 
