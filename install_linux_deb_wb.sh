@@ -148,6 +148,11 @@ cd ./backend
 #export PATH=$root/node/bin:$PATH
 $root/node/bin/node $root/node/bin/npm i --only=prod
 
+mkdir -p /opt/intrahouse-c/node/bin
+
+sudo ln -s $root/node/bin/node /opt/intrahouse-c/node/bin/node
+sudo ln -s $root/node/bin/npm /opt/intrahouse-c/node/bin/npm
+
 #-------------- end
 
 
