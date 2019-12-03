@@ -23,7 +23,9 @@ cd $root
    "project":"$project_name",
    "name_service":"$name_service",
    "lang":"$lang",
-   "vardir":"$project_root"
+   "vardir":"$project_root",
+   "node":"$root/node/bin/node",
+   "npm":"$root/node/bin/node $root/node/bin/npm",
  }
 EOF
 
