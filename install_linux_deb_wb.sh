@@ -25,7 +25,7 @@ cd $root
    "lang":"$lang",
    "vardir":"$project_root",
    "node":"$root/node/bin/node",
-   "npm":"$root/node/bin/node $root/node/bin/npm",
+   "npm":"$root/node/bin/node $root/node/bin/npm"
  }
 EOF
 
