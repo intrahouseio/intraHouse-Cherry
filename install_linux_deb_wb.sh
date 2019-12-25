@@ -146,7 +146,7 @@ rm -fr ./node.tar.xz
 
 cd ./backend
 #export PATH=$root/node/bin:$PATH
-sudo $root/node/bin/node $root/node/bin/npm i --only=prod
+$root/node/bin/node $root/node/bin/npm i --only=prod
 
 mkdir -p /opt/intrahouse-c/node/bin
 
