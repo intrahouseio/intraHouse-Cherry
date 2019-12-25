@@ -85,7 +85,7 @@ rm -frd ./node.tar.xz
 
 cd ./backend
 #export PATH=$PATH:$root/node/bin
-$root/node/bin/node $root/node/bin/npm i --only=prod
+sudo sudo $root/node/bin/node $root/node/bin/npm i --only=prod
 
 #-------------- end
 
