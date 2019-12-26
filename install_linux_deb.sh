@@ -143,7 +143,7 @@ rm -fr ./node.tar.xz
 
 cd ./backend
 #export PATH=$root/node/bin:$PATH
-sudo sudo $root/node/bin/node $root/node/bin/npm i --only=prod
+$root/node/bin/node $root/node/bin/npm i --only=prod
 
 #-------------- end
 
