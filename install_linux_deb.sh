@@ -145,7 +145,7 @@ cd ./backend
 #export PATH=$root/node/bin:$PATH
 $root/node/bin/node $root/node/bin/npm i --only=prod
 cp -Rf $root/deps/core-js $root/backend/node_modules
-$root/node/bin/node $root/node/bin/npm i --only=prod
+$root/node/bin/node $root/node/bin/npm i pdfmake@0.1.37 --only=prod
 
 #-------------- end
 
