@@ -99,6 +99,7 @@ case $(uname -m) in
   armv6*)  processor="armv6l" ;;
   armv7*)  processor="armv7l" ;;
   armv8*)  processor="arm64" ;;
+  aarch64*)  processor="arm64" ;;
   *)       [[ $(getconf LONG_BIT) = "64" ]] && processor="x64" || processor="x86" ;;
 esac
 
