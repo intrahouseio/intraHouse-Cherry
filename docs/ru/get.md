@@ -56,7 +56,7 @@
 
 ## Wiren Board
 
-`curl -sL https://git.io/JeMEz| sudo -E bash -s ru` 
+`curl -sL https://git.io/JeMEz| bash -s ru` 
   
   
 ## Android (Termux)
