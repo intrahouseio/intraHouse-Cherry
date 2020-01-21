@@ -50,8 +50,8 @@ if [[ $check_zip != "false" ]]; then
 else
   echo -e "\033[0;35m zip:\033[0;31m false \033[0m --> will be installed"
 
-  sudo apt-get update > /dev/null
-  sudo apt-get install -y zip > /dev/null
+   apt-get update > /dev/null
+   apt-get install -y zip > /dev/null
 fi
 
 if [[ $check_unzip != "false" ]]; then
@@ -59,8 +59,8 @@ if [[ $check_unzip != "false" ]]; then
 else
   echo -e "\033[0;35m unzip:\033[0;31m false \033[0m --> will be installed"
 
-  sudo apt-get update > /dev/null
-  sudo apt-get install -y unzip > /dev/null
+   apt-get update > /dev/null
+   apt-get install -y unzip > /dev/null
 fi
 
 if [[ $check_xz != "false" ]]; then
@@ -68,8 +68,8 @@ if [[ $check_xz != "false" ]]; then
 else
   echo -e "\033[0;35m xz-utils:\033[0;31m false \033[0m --> will be installed"
 
-  sudo apt-get update > /dev/null
-  sudo apt-get install -y xz-utils > /dev/null
+   apt-get update > /dev/null
+   apt-get install -y xz-utils > /dev/null
 fi
 
 if [[ $check_iconfig != "false" ]]; then
@@ -77,8 +77,8 @@ if [[ $check_iconfig != "false" ]]; then
 else
   echo -e "\033[0;35m net-tools:\033[0;31m false \033[0m --> will be installed"
 
-  sudo apt-get update > /dev/null
-  sudo apt-get install -y net-tools > /dev/null
+   apt-get update > /dev/null
+   apt-get install -y net-tools > /dev/null
 fi
 
 if [[ $check_rsync != "false" ]]; then
@@ -86,8 +86,8 @@ if [[ $check_rsync != "false" ]]; then
 else
   echo -e "\033[0;35m rsync:\033[0;31m false \033[0m --> will be installed"
 
-  sudo apt-get update > /dev/null
-  sudo apt-get install -y rsync > /dev/null
+   apt-get update > /dev/null
+   apt-get install -y rsync > /dev/null
 fi
 
 #-------------- end
@@ -153,8 +153,8 @@ $root/node/bin/node $root/node/bin/npm i pdfmake@0.1.37 --only=prod
 
 mkdir -p /opt/intrahouse-c/node/bin
 
-sudo ln -s $root/node/bin/node /opt/intrahouse-c/node/bin/node
-sudo ln -s $root/node/bin/npm /opt/intrahouse-c/node/bin/npm
+ ln -s $root/node/bin/node /opt/intrahouse-c/node/bin/node
+ ln -s $root/node/bin/npm /opt/intrahouse-c/node/bin/npm
 
 #-------------- end
 
@@ -222,9 +222,9 @@ case "\$1" in
         echo "Starting \$name"
         cd "\$dir"
         if [ -z "\$user" ]; then
-            sudo \$cmd >> "\$stdout_log" 2>> "\$stderr_log" &
+             \$cmd >> "\$stdout_log" 2>> "\$stderr_log" &
         else
-            sudo -u "\$user" \$cmd >> "\$stdout_log" 2>> "\$stderr_log" &
+             -u "\$user" \$cmd >> "\$stdout_log" 2>> "\$stderr_log" &
         fi
         echo \$! > "\$pid_file"
         if ! is_running; then
