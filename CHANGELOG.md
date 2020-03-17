@@ -1,6 +1,6 @@
 ### intraHouse-Cherry -  Unreleased
 
-### intraHouse-Cherry - v4.7.3 (11.11.19)
+### intraHouse-Cherry - v4.7.3 (17.03.20)
 * Решение проблемы с потерей ключа. Проблема может возникать при использовании нестандартных сетевых интерфейсов после hard reset. Добавлен параметр sortreset.  
 
 ### intraHouse-Cherry - v4.7.2 (03.03.20) 
