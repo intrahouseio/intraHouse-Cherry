@@ -283,7 +283,7 @@ update-rc.d $name_service defaults
 
 # fi
 
-if [[ $type_service == "systemd" ]]; then
+# if [[ $type_service == "systemd" ]]; then
 
 #  $(service $name_service stop 2> /dev/null)
   path_service="/etc/systemd/system/$name_service.service"
@@ -314,9 +314,9 @@ EOF
   systemctl daemon-reload
   systemctl enable $name_service
 
-fi
+# fi
 
-if [[ $type_service == "upstart" ]]; then
+# if [[ $type_service == "upstart" ]]; then
 
 #  $(service $name_service stop 2> /dev/null)
   path_service="/etc/init/$name_service.conf"
@@ -334,7 +334,7 @@ if [[ $type_service == "upstart" ]]; then
   exec /opt/$name_service/node/bin/node /opt/$name_service/backend/app.js prod
 EOF
 
-fi
+# fi
 
 service $name_service restart > /dev/null
 service $name_service status
