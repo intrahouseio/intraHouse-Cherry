@@ -72,7 +72,13 @@ unzip ./intrahouse-lite.zip > /dev/null
 
 cd ./backend
 
+$root/node/bin/node $root/node/bin/npm i --only=prod
+
+$root/node/bin/node $root/node/bin/
+
 npm i --only=prod
+cp -rf $root/deps/core-js $root/backend/node_modules
+npm i pdfmake@0.1.37 --only=prod
 npm i --only=prod pm2 -g
 
 cd ..
