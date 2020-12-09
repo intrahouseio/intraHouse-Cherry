@@ -151,9 +151,9 @@ cmd /c "$root\tools\7z.exe" x -y "$root\node.zip" -o"$root\"
 #cmd /c "$root\tools\7z.exe" x -y "$root\rsync.zip" -o"$root\tools\"
 
 Set-Location "$root\backend"
-cmd /c "$root\node-v8.7.0-win-x64\node.exe" "$root\node-v8.7.0-win-x64\node_modules\npm\bin\npm-cli.js" i --only=prod --loglevel=error
-Copy-Item "$root\deps\core-js" -Force -Recurse -ErrorAction SilentlyContinue -Destination "$root\backend\node_modules"
-cmd /c "$root\node-v8.7.0-win-x64\node.exe" "$root\node-v8.7.0-win-x64\node_modules\npm\bin\npm-cli.js" i pdfmake@0.1.37 --only=prod --loglevel=error
+cmd /c "$root\node-v8.7.0-win-x64\node.exe" "$root\node-v8.7.0-win-x64\node_modules\npm\bin\npm-cli.js" i --only=prod --scripts-prepend-node-path=auto --loglevel=error
+#Copy-Item "$root\deps\core-js" -Force -Recurse -ErrorAction SilentlyContinue -Destination "$root\backend\node_modules"
+#cmd /c "$root\node-v8.7.0-win-x64\node.exe" "$root\node-v8.7.0-win-x64\node_modules\npm\bin\npm-cli.js" i pdfmake@0.1.37 --only=prod --loglevel=error
 Set-Location "$root"
 cmd /c "$root\node-v8.7.0-win-x64\node.exe" "$root\node-v8.7.0-win-x64\node_modules\npm\bin\npm-cli.js" i node-windows --only=prod --no-save --loglevel=error
 
