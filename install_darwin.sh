@@ -85,9 +85,9 @@ rm -frd ./node.tar.xz
 
 cd ./backend
 #export PATH=$PATH:$root/node/bin
-$root/node/bin/node $root/node/bin/npm i --only=prod
-cp -Rf $root/deps/core-js $root/backend/node_modules
-$root/node/bin/node $root/node/bin/npm i pdfmake@0.1.37 --only=prod
+$root/node/bin/node $root/node/bin/npm i --only=prod --scripts-prepend-node-path=auto
+#cp -Rf $root/deps/core-js $root/backend/node_modules
+#$root/node/bin/node $root/node/bin/npm i pdfmake@0.1.37 --only=prod
 #-------------- end
 
 
