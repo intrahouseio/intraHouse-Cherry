@@ -54,7 +54,7 @@ curl --progress-bar -L -o intrahouse-lite.zip $file
 
 echo -e "\033[0m"
 echo -e "get nodeJS \033[0;34"
-curl --progress-bar -L -o node.tar.xz "https://nodejs.org/dist/v8.7.0/node-v8.7.0-darwin-x64.tar.gz"
+curl --progress-bar -L -o node.tar.xz "https://nodejs.org/dist/v8.17.0/node-v8.17.0-darwin-x64.tar.gz"
 
 
 #-------------- end

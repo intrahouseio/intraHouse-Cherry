@@ -57,7 +57,7 @@ exit $LASTEXITCODE
 
 if (Get-NetFirewallRule -DisplayName intrahouse-c -ErrorAction SilentlyContinue) {
 } else {
-New-NetFirewallRule -DisplayName "$name_service" -Direction Inbound -Program "$root\node-v8.7.0-win-x64\node.exe" -RemoteAddress ANY -Action Allow | Out-Null
+New-NetFirewallRule -DisplayName "$name_service" -Direction Inbound -Program "$root\node-v8.17.0-win-x64\node.exe" -RemoteAddress ANY -Action Allow | Out-Null
 }
 
 if (Get-Service -Name "$name_service" -ErrorAction SilentlyContinue) {
@@ -104,8 +104,8 @@ $config = "{
   `"project`":`"$project_name`",
   `"name_service`":`"$name_service`",
   `"vardir`":`"C:`\ProgramData`\`",
-  `"node`":`"$root`\node-v8.7.0-win-x64`\node.exe`",
-  `"npm`":`"$root`\node-v8.7.0-win-x64`\node.exe $root`\node-v8.7.0-win-x64`\node_modules`\npm`\bin`\npm-cli.js`",
+  `"node`":`"$root`\node-v8.17.0-win-x64`\node.exe`",
+  `"npm`":`"$root`\node-v8.17.0-win-x64`\node.exe $root`\node-v8.17.0-win-x64`\node_modules`\npm`\bin`\npm-cli.js`",
   `"zip`":`"$root`\tools`\7z.exe`",
   `"unzip`":`"$root`\tools`\7z.exe`",
   `"lang`":`"$lang`"
@@ -138,7 +138,7 @@ Write-Host "get $($name_service)"
 Invoke-WebRequest -Uri $file -OutFile "$root\intrahouse-lite.zip"
 
 Write-Host "get nodeJS"
-Invoke-WebRequest -Uri "http://nodejs.org/dist/v8.7.0/node-v8.7.0-win-x64.zip" -OutFile "$root\node.zip"
+Invoke-WebRequest -Uri "http://nodejs.org/dist/v8.17.0/node-v8.17.0-win-x64.zip" -OutFile "$root\node.zip"
 
 
 #-------------- end
@@ -151,11 +151,11 @@ cmd /c "$root\tools\7z.exe" x -y "$root\node.zip" -o"$root\"
 #cmd /c "$root\tools\7z.exe" x -y "$root\rsync.zip" -o"$root\tools\"
 
 Set-Location "$root\backend"
-cmd /c "$root\node-v8.7.0-win-x64\node.exe" "$root\node-v8.7.0-win-x64\node_modules\npm\bin\npm-cli.js" i --only=prod --scripts-prepend-node-path=auto --loglevel=error
+cmd /c "$root\node-v8.17.0-win-x64\node.exe" "$root\node-v8.17.0-win-x64\node_modules\npm\bin\npm-cli.js" i --only=prod --scripts-prepend-node-path=auto --loglevel=error
 #Copy-Item "$root\deps\core-js" -Force -Recurse -ErrorAction SilentlyContinue -Destination "$root\backend\node_modules"
-#cmd /c "$root\node-v8.7.0-win-x64\node.exe" "$root\node-v8.7.0-win-x64\node_modules\npm\bin\npm-cli.js" i pdfmake@0.1.37 --only=prod --loglevel=error
+#cmd /c "$root\node-v8.17.0-win-x64\node.exe" "$root\node-v8.17.0-win-x64\node_modules\npm\bin\npm-cli.js" i pdfmake@0.1.37 --only=prod --loglevel=error
 Set-Location "$root"
-cmd /c "$root\node-v8.7.0-win-x64\node.exe" "$root\node-v8.7.0-win-x64\node_modules\npm\bin\npm-cli.js" i node-windows --only=prod --no-save --loglevel=error
+cmd /c "$root\node-v8.17.0-win-x64\node.exe" "$root\node-v8.17.0-win-x64\node_modules\npm\bin\npm-cli.js" i node-windows --only=prod --no-save --loglevel=error
 
 Copy-Item "$root\project_$lang" -Force -Recurse -ErrorAction SilentlyContinue -Destination "$project_path"
 
@@ -192,9 +192,9 @@ svc.install('$root');
 [IO.File]::WriteAllLines("$($root)/service.js", $service.replace("\","\\"))
 
 if (Get-Service -Name "$name_service" -ErrorAction SilentlyContinue) {
-cmd /c "$root\node-v8.7.0-win-x64\node.exe" "$root\service.js"
+cmd /c "$root\node-v8.17.0-win-x64\node.exe" "$root\service.js"
 } else {
-cmd /c "$root\node-v8.7.0-win-x64\node.exe" "$root\service.js"
+cmd /c "$root\node-v8.17.0-win-x64\node.exe" "$root\service.js"
 }
 Sleep 3
 cmd /c sc start intrahousec.exe | Out-Null
